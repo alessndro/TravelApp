@@ -24,7 +24,7 @@ export default function Questions() {
         console.log(userInformation)
     }
 
-    aynsc function handleSubmit(event){
+    function handleSubmit(event){
         event.preventDefault()
         console.log('submit')
 
