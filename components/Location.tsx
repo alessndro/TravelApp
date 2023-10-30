@@ -1,7 +1,13 @@
 import React from 'react'
 import Image from 'next/image';
 
-export default function Location(props) {
+type imageProps = {
+    backgroundImage: string; // Specify the appropriate type for theme
+    name: string; // Make icon an optional string prop
+    location: string;
+    joined: string;
+  };
+export default function Location(props: imageProps) {
   return (
     <div className={`h-full w-full min-w-[1100px] ${props.backgroundImage} p-10 lg:rounded-3xl`}>
         <div className='flex flex-col justify-between h-full'>
