@@ -5,6 +5,7 @@ type ButtonProps = {
   theme: string; // Specify the appropriate type for theme
   icon?: string; // Make icon an optional string prop
   title: string;
+  type?: string;
 };
 
 export default function Button(props: ButtonProps) {
