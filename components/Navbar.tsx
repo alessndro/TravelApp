@@ -47,12 +47,12 @@ export default function Navbar() {
                 <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/">
                     Test2
                 </Link>
-                <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/">
-                    Test3
+                <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/destination">
+                    Destination
                 </Link>
 
                 <div className='flex' >
-                    <Button type="button" title='log in' theme='btn_dark_green' icon="/user.svg"/>
+                    <Button type="button" title='Get Started' theme='btn_dark_green' icon="/user.svg"/>
                 </div>
             </div>
         </div>}
