@@ -34,6 +34,7 @@ export const handler: Handler = async (event) => {
       Evening: ${inputObject.evening}
 
       ***
+      Inside the response dont repeat the answers of the survey. Try to rephrase them and give different examples.
       Your response: Your Unique Travel personality is [insert personality]. Based on your survey responses, you're a true [Travel Personality Name]. Your travel style is all about [Brief Description of Personality]. You love [Specific Travel Preferences].
       `,
       max_tokens: 500,
