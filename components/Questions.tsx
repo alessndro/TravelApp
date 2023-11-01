@@ -24,22 +24,22 @@ export default function Questions() {
         console.log(userInformation)
     }
 
-    function handleSubmit(event: React.FormEvent<HTMLFormElement>){
+    async function handleSubmit(event: React.FormEvent<HTMLFormElement>){
         event.preventDefault()
         console.log('submit')
 
     
-        // const url = 'https://deft-smakager-03b2a5.netlify.app/.netlify/functions/travelIdentity'
+        const url = 'https://gotravelapp.netlify.app/.netlify/functions/travelIdentity'
             
-        // const response = await fetch(url, {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'text/plain',
-        //     },
-        //         body: "test"
-        // })
-        // const data = await response.json()
-        // console.log(data)
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'text/plain',
+            },
+                body: "test"
+        })
+        const data = await response.json()
+        console.log(data)
     }
     
   return (
