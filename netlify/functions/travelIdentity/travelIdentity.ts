@@ -40,6 +40,8 @@ export const handler: Handler = async (event) => {
     });
 
     const data = response.choices[0].text;
+    console.log('inside severless function')
+    console.log(data)
     return {
       statusCode: 200,
       body: JSON.stringify({
