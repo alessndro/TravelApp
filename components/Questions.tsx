@@ -13,7 +13,7 @@ export default function Questions() {
         evening: '',
     })
 
-    function handleChange(event){
+    function handleChange(event: React.ChangeEvent<HTMLInputElement>){
         console.log('handle change')
         setUserInformation(prevUser => {
             return {
@@ -24,7 +24,7 @@ export default function Questions() {
         console.log(userInformation)
     }
 
-    function handleSubmit(event){
+    function handleSubmit(event: React.ChangeEvent<HTMLInputElement>){
         event.preventDefault()
         console.log('submit')
 
