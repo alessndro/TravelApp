@@ -45,7 +45,7 @@ export default function Questions() {
         setTravelPersonality(data.value)
         if (data.value)
         {
-            console.log(data.value.split(".")[0].split(" "))
+            console.log(data.value.split(".")[0].split(" ").slice(-2).join(''))
         }
     }
 
