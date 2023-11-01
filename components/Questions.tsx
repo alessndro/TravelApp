@@ -13,6 +13,7 @@ export default function Questions() {
         evening: '',
     })
     const [travelPersonality, setTravelPersonality] = React.useState('')
+    const [travelIdentity, setTravelIdentity] = React.useState('')
     const [showIdentity, setShowIdentity] = React.useState(false)
 
     function handleChange(event: React.ChangeEvent<HTMLInputElement>){
@@ -41,6 +42,8 @@ export default function Questions() {
         })
         const data = await response.json()
         setShowIdentity(prevShow => !prevShow)
+        // Retrieve the travel personality
+        setTravelIdentity(data.split('.')[0].split(' ').slice(-2).join(''))
         setTravelPersonality(data.value)
     }
     
@@ -382,7 +385,7 @@ export default function Questions() {
         {showIdentity &&
             <div className='lg:w-1/2 border'>
                  <h2 className='bold-32 lg:bold-40'>Great News!</h2>
-                 <h3 className='regular-42 lg:regular-32 mt-2 lg:mt-4'>Adventourous Explorer</h3>
+                 <h3 className='regular-42 lg:regular-32 mt-2 lg:mt-4'>{travelIdentity && travelIdentity}</h3>
             <p className='regular-16 text-gray-30 mt-5'>Our AI machines have delved deep into your travel preferences, and the verdict is in. Get ready to uncover your extraordinary travel personality! Your Unique Travel personality is Test. Based on your survey responses, you're a true [Travel Personality Name]. Your travel style is all about [Brief Description of Personality]. You love [Specific Travel Preferences].
 
 Here are a few tailored recommendations for your next adventure: </p>
