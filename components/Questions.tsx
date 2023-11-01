@@ -12,6 +12,7 @@ export default function Questions() {
         food: '',
         evening: '',
     })
+    const [showIdentity, setShowIdentity] = React.useState(true)
 
     function handleChange(event: React.ChangeEvent<HTMLInputElement>){
         console.log('handle change')
@@ -40,11 +41,12 @@ export default function Questions() {
         })
         const data = await response.json()
         console.log(data)
+        setShowIdentity(prevShow => !prevShow)
     }
     
   return (
     <section className='container max-container padding-container flex flex-col py-10 2xl:py-20 lg:flex-row'>
-        <div className='lg:w-1/2 border'>
+        {!showIdentity && <div className='lg:w-1/2 border'>
             <h2 className='bold-32 lg:bold-40'>Start your journey right here</h2>
             <p className='regular-16 text-gray-30 mt-5'>Provide our AI with information about your personality. Our creative generative AI will create a travel personality combined with a travel location completely personalised to you</p>
             
@@ -376,7 +378,15 @@ export default function Questions() {
 
                 <Button type="button" title='Show my identity' theme='btn_dark_green' icon="/user.svg"/>
             </form>
-        </div>
+        </div>}
+        {showIdentity &&
+            <div className='lg:w-1/2 border'>
+                 <h2 className='bold-32 lg:bold-40'>Congratulations!</h2>
+            <p className='regular-16 text-gray-30 mt-5'>Your Unique Travel personality is Test. ased on your survey responses, you're a true [Travel Personality Name]. Your travel style is all about [Brief Description of Personality]. You love [Specific Travel Preferences].
+
+Here are a few tailored recommendations for your next adventure: </p>
+            </div>
+        }
         <div className='lg:w-1/2 border'>
             right
         </div>
