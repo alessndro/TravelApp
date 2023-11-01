@@ -4,7 +4,7 @@ export default function Login() {
   return (
     <div className='container  mx-auto w-screen py-12 flex justify-center items-center lg:py-8'>
            
-        <div className='log-div shadow-xl flex flex-col space-y-4 px-10 py-5 bg-white-700  md:px-15 md:max-w-lg sm:max-w-md'>
+        {/* <div className='log-div shadow-xl flex flex-col space-y-4 px-10 py-5 bg-white-700  md:px-15 md:max-w-lg sm:max-w-md'>
             <h2 className='text-3xl font-bold mb-2 md:text-4xl'>MineScribe</h2>
             <h2 className='text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl'>Sign in to your account.</h2>
                 {error && <p>{error}</p>}
@@ -45,7 +45,7 @@ export default function Login() {
                     <p>Need an account?</p>
                         <Link className='text-purple-500' to='/signup'>Create account</Link>
                 </div>
-            </div>
+            </div> */}
         </div>
   )
 }

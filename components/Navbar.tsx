@@ -23,8 +23,8 @@ export default function Navbar() {
             <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/">
                 Test2
             </Link>
-            <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/">
-                Test3
+            <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/destination">
+                Destination
             </Link>
         </div>
 
