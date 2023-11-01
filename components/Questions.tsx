@@ -15,6 +15,7 @@ export default function Questions() {
     const [travelPersonality, setTravelPersonality] = React.useState('')
     const [travelIdentity, setTravelIdentity] = React.useState('')
     const [showIdentity, setShowIdentity] = React.useState(false)
+    const [travelImage, setTravelImage] = React.useState('')
 
     function handleChange(event: React.ChangeEvent<HTMLInputElement>){
         console.log('handle change')
@@ -45,30 +46,30 @@ export default function Questions() {
         setTravelPersonality(data.value)
         if (data.value)
         {
-            console.log(data.value.split(".")[0].split(" ").slice(-2).join(''))
+            setTravelIdentity(data.value.split(".")[0].split(" ").slice(-2).join(' '))
         }
     }
 
     React.useEffect(() => {
         if (travelIdentity.toLowerCase() === 'adventurous explorer')
         {
-
+                setTravelImage('Adventure.png')
         }
         else if (travelIdentity.toLowerCase() === 'culture and city explorer')
         {
-
+                setTravelImage('Cultural.png')
         }
         else if (travelIdentity.toLowerCase() === 'luxury enthusiast')
         {
-
+            setTravelImage('Luxe.png')
         }
         else if (travelIdentity.toLowerCase() === 'relaxation and nature lover')
         {
-
+            setTravelImage('relax.png')
         }
         else if (travelIdentity.toLowerCase() === 'budget traveler')
         {
-
+            setTravelImage('Budget.png')
         }
     }, [travelIdentity])
     
@@ -410,7 +411,7 @@ export default function Questions() {
         {showIdentity &&
             <div className='lg:w-1/2 border'>
                  <h2 className='bold-32 lg:bold-40'>Great News!</h2>
-                 <h3 className='regular-42 lg:regular-32 mt-2 lg:mt-4'>{travelIdentity && travelIdentity}</h3>
+                 <h3 className='regular-42 lg:regular-32 mt-2 lg:mt-4'>{travelIdentity ? travelIdentity : 'A real Traveler'}</h3>
             <p className='regular-16 text-gray-30 mt-5'>Our AI machines have delved deep into your travel preferences, and the verdict is in. Get ready to uncover your extraordinary travel personality! {travelPersonality && travelPersonality}.
 
 Here are a few tailored recommendations for your next adventure: </p>
@@ -422,7 +423,7 @@ Here are a few tailored recommendations for your next adventure: </p>
         }
         <div className='lg:w-1/2 border bg-feature-bg bg-center bg-no-repeat'>
             <Image 
-                src="/Cultural.png"
+                src={!travelImage ? "/Cultural.png": travelImage}
                 alt='image personality'
                 width={700}
                 height={400}
