@@ -29,7 +29,7 @@ export default function Questions() {
         console.log('submit')
 
     
-        const url = 'https://gotravelapp.netlify.app/.netlify/functions/travelIdentity'
+        const url = 'https://main--gotravelapp.netlify.app/.netlify/functions/travelIdentity'
             
         const response = await fetch(url, {
             method: 'POST',
