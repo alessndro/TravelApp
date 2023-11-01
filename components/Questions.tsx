@@ -12,7 +12,7 @@ export default function Questions() {
         food: '',
         evening: '',
     })
-    const [showIdentity, setShowIdentity] = React.useState(true)
+    const [showIdentity, setShowIdentity] = React.useState(false)
 
     function handleChange(event: React.ChangeEvent<HTMLInputElement>){
         console.log('handle change')
@@ -35,9 +35,9 @@ export default function Questions() {
         const response = await fetch(url, {
             method: 'POST',
             headers: {
-                'content-type': 'text/plain',
+                'content-type': 'application/json',
             },
-                body: "test"
+                body: JSON.stringify(userInformation),
         })
         const data = await response.json()
         console.log(data)
@@ -381,14 +381,25 @@ export default function Questions() {
         </div>}
         {showIdentity &&
             <div className='lg:w-1/2 border'>
-                 <h2 className='bold-32 lg:bold-40'>Congratulations!</h2>
-            <p className='regular-16 text-gray-30 mt-5'>Your Unique Travel personality is Test. ased on your survey responses, you're a true [Travel Personality Name]. Your travel style is all about [Brief Description of Personality]. You love [Specific Travel Preferences].
+                 <h2 className='bold-32 lg:bold-40'>Great News!</h2>
+                 <h3 className='regular-42 lg:regular-32 mt-2 lg:mt-4'>Adventourous Explorer</h3>
+            <p className='regular-16 text-gray-30 mt-5'>Our AI machines have delved deep into your travel preferences, and the verdict is in. Get ready to uncover your extraordinary travel personality! Your Unique Travel personality is Test. Based on your survey responses, you're a true [Travel Personality Name]. Your travel style is all about [Brief Description of Personality]. You love [Specific Travel Preferences].
 
 Here are a few tailored recommendations for your next adventure: </p>
+<div className='flex flex-col w-full gap-3 mt-10 sm:flex-row'>
+                <Button theme='btn_green' title="Generate plan" type="button" />
+                <Button theme="btn_white_text" title="Share with friends" icon="/play.svg" />
+             </div>
             </div>
         }
-        <div className='lg:w-1/2 border'>
-            right
+        <div className='lg:w-1/2 border bg-feature-bg bg-center bg-no-repeat'>
+            <Image 
+                src="/Cultural.png"
+                alt='image personality'
+                width={700}
+                height={400}
+                className='border w-full'
+            />
         </div>
     </section>
     // <section className='border-2 border-red-500 container max-container padding-container flex flex-col gap-20 py-10 2xl:py-20 lg:flex-row'>

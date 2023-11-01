@@ -28,7 +28,7 @@ export default function Hero() {
                 <p className='ml-5 medium-14'>198k<span className='ml-1 text-gray-30'>Verified Reviews</span></p>
              </div>
 
-             <div className='border border-green-100 flex flex-col w-full gap-3 mt-10 sm:flex-row'>
+             <div className='flex flex-col w-full gap-3 mt-10 sm:flex-row'>
                 <Button theme='btn_green' title="Start Now" type="button" />
                 <Button theme="btn_white_text" title="How Does it Work?" icon="/play.svg" />
              </div>
