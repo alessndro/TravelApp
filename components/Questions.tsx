@@ -411,10 +411,9 @@ export default function Questions() {
             <div className='lg:w-1/2 border'>
                  <h2 className='bold-32 lg:bold-40'>Great News!</h2>
                  <h3 className='regular-42 lg:regular-32 mt-2 lg:mt-4'>{travelIdentity && travelIdentity}</h3>
-            <p className='regular-16 text-gray-30 mt-5'>Our AI machines have delved deep into your travel preferences, and the verdict is in. Get ready to uncover your extraordinary travel personality! Your Unique Travel personality is Test. Based on your survey responses, you're a true [Travel Personality Name]. Your travel style is all about [Brief Description of Personality]. You love [Specific Travel Preferences].
+            <p className='regular-16 text-gray-30 mt-5'>Our AI machines have delved deep into your travel preferences, and the verdict is in. Get ready to uncover your extraordinary travel personality! {travelPersonality && travelPersonality}.
 
 Here are a few tailored recommendations for your next adventure: </p>
-{travelPersonality && <p>{travelPersonality}</p>}
 <div className='flex flex-col w-full gap-3 mt-10 sm:flex-row'>
                 <Button theme='btn_green' title="Generate plan" type="button" />
                 <Button theme="btn_white_text" title="Share with friends" icon="/play.svg" />
