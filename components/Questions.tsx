@@ -29,7 +29,6 @@ export default function Questions() {
     async function handleSubmit(event: React.FormEvent<HTMLFormElement>){
         event.preventDefault()
         console.log('submit')
-
     
         const url = 'https://main--gotravelapp.netlify.app/.netlify/functions/travelIdentity'
             
@@ -43,11 +42,37 @@ export default function Questions() {
         const data = await response.json()
         setShowIdentity(prevShow => !prevShow)
         // Retrieve the travel personality
-        setTravelIdentity(data.split('.')[0].split(' ').slice(-2).join(''))
         setTravelPersonality(data.value)
+        if (data.value)
+        {
+            console.log(data.value.split(".")[0].split(" "))
+        }
     }
+
+    React.useEffect(() => {
+        if (travelIdentity.toLowerCase() === 'adventurous explorer')
+        {
+
+        }
+        else if (travelIdentity.toLowerCase() === 'culture and city explorer')
+        {
+
+        }
+        else if (travelIdentity.toLowerCase() === 'luxury enthusiast')
+        {
+
+        }
+        else if (travelIdentity.toLowerCase() === 'relaxation and nature lover')
+        {
+
+        }
+        else if (travelIdentity.toLowerCase() === 'budget traveler')
+        {
+
+        }
+    }, [travelIdentity])
     
-  return (
+    return (
     <section className='container max-container padding-container flex flex-col py-10 2xl:py-20 lg:flex-row'>
         {!showIdentity && <div className='lg:w-1/2 border'>
             <h2 className='bold-32 lg:bold-40'>Start your journey right here</h2>
