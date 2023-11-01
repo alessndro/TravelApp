@@ -24,7 +24,7 @@ export default function Questions() {
         console.log(userInformation)
     }
 
-    function handleSubmit(event: React.ChangeEvent<HTMLInputElement>){
+    function handleSubmit(event: React.FormEvent<HTMLFormElement>){
         event.preventDefault()
         console.log('submit')
 
