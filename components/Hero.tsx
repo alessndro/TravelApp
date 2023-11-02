@@ -4,11 +4,11 @@ import Button from './Button';
 
 export default function Hero() {
   return (
-    <section className='border-2 border-red-500 container max-container padding-container flex flex-col gap-20 py-10 2xl:py-20 lg:flex-row'>
+    <section className='container max-container padding-container flex flex-col gap-20 py-10 2xl:py-20 lg:flex-row'>
         <div className='hero-map' />
         
         {/* LEFT SIDE OF HERO */}
-        <div className='border-2 border-green-500 relative z-20  flex flex-1 flex-col lg:w-1/2'>
+        <div className='relative z-20  flex flex-1 flex-col lg:w-1/2'>
             <Image 
                 src="/camp.svg"
                 alt='camp icon'
@@ -33,7 +33,7 @@ export default function Hero() {
                 <Button theme="btn_white_text" title="How Does it Work?" icon="/play.svg" />
              </div>
         </div>
-        <div className='border-2 border-green-500 relative z-20  flex flex-1 flex-col  justify-start items-start lg:w-1/2'>
+        <div className=' relative z-20  flex flex-1 flex-col  justify-start items-start lg:w-1/2'>
             <div className='bg-green-90 relative rounded-3xl px-5 py-5'>
                 
                 <div className='flex flex-row justify-between'>

@@ -11,7 +11,7 @@ export default function Navbar() {
         setIsMenuOpen(prevMenu => !prevMenu)
     }
   return (
-    <nav className='border-2 container flexBetween max-container padding-container relative z-30 py-5'>
+    <nav className='container flexBetween max-container padding-container relative z-30 py-5'>
         <Link href="/">
             <Image src='/hilink-logo.svg' alt='logo' width={74} height={29}/>
         </Link>
@@ -23,13 +23,13 @@ export default function Navbar() {
             <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/">
                 Test2
             </Link>
-            <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/destination">
-                Destination
+            <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/personality">
+                Travel Personality Test
             </Link>
         </div>
 
         <div className='hidden lg:flex' >
-            <Button type="button" title='log in' theme='btn_dark_green' icon="/user.svg"/>
+            <Button type="button" title='Get Started' theme='btn_dark_green' icon="/user.svg"/>
         </div>
        
         {isMenuOpen ?  <Image onClick={toggleMenu} className="swirl-in-fwd lg:hidden" src='/close.png' alt='logo' width={30} height={30}/> : <Image onClick={toggleMenu} className="cursor-pointer inline-block lg:hidden"src="/menu.svg" alt="hamburger menu icon" width={30} height={30}/>}

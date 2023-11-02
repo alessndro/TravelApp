@@ -16,6 +16,7 @@ export default function Questions() {
     const [travelIdentity, setTravelIdentity] = React.useState('')
     const [showIdentity, setShowIdentity] = React.useState(false)
     const [travelImage, setTravelImage] = React.useState('')
+    const [isSurveyDisplayed, setIsSurveyDisplayed] = React.useState(false)
 
     function handleChange(event: React.ChangeEvent<HTMLInputElement>){
         console.log('handle change')
@@ -63,7 +64,7 @@ export default function Questions() {
         {
             setTravelImage('Luxe.png')
         }
-        else if (travelIdentity.toLowerCase() === 'relaxation and nature lover')
+        else if (travelIdentity.toLowerCase() === 'relaxation and nature lover' && travelIdentity.toLowerCase() === 'nature lover')
         {
             setTravelImage('relax.png')
         }
@@ -76,10 +77,10 @@ export default function Questions() {
     return (
     <section className='container max-container padding-container flex flex-col py-10 2xl:py-20 lg:flex-row'>
         {!showIdentity && <div className='lg:w-1/2 border'>
-            <h2 className='bold-32 lg:bold-40'>Start your journey right here</h2>
-            <p className='regular-16 text-gray-30 mt-5'>Provide our AI with information about your personality. Our creative generative AI will create a travel personality combined with a travel location completely personalised to you</p>
-            
-            
+            <h2 className='bold-32 lg:bold-40'>Discover your Travel Identity</h2>
+            <p className='regular-16 text-gray-30 mt-5 mb-10'>Are you a true wanderer at heart, always seeking new adventures and exploring new horizons? Or do you prefer the comforts of home and the familiarity of your surroundings? Find out where you stand on the travel spectrum with our Travel Identity Survey. Travel identity is a unique and personal way to understand how you connect with the world through your travel experiences. It's about recognizing your travel preferences, exploring your comfort zones, and discovering the destinations and experiences that truly resonate with you.</p>
+           
+            {!isSurveyDisplayed ? <Button type="button" title='Start the survey' theme='btn_green' icon="/user.svg"/> :
             <form  onSubmit={handleSubmit} className='mt-5 overflow-y-auto max-h-96'>
 
                 <fieldset>
@@ -406,13 +407,13 @@ export default function Questions() {
 
 
                 <Button type="button" title='Show my identity' theme='btn_dark_green' icon="/user.svg"/>
-            </form>
+            </form>}
         </div>}
         {showIdentity &&
             <div className='lg:w-1/2 border'>
                  <h2 className='bold-32 lg:bold-40'>Great News!</h2>
-                 <h3 className='regular-42 lg:regular-32 mt-2 lg:mt-4'>{travelIdentity ? travelIdentity : 'A real Traveler'}</h3>
-            <p className='regular-16 text-gray-30 mt-5'>Our AI machines have delved deep into your travel preferences, and the verdict is in. Get ready to uncover your extraordinary travel personality! {travelPersonality && travelPersonality}.
+                 <h3 className='regular-42 lg:regular-32 mt-2 lg:mt-4 text-green-950'>{travelIdentity ? travelIdentity : 'A real Traveler'}</h3>
+            <p className='regular-16 text-gray-30 mt-5 lg:w-max-md'>Our AI machines have delved deep into your travel preferences, and the verdict is in. Get ready to uncover your extraordinary travel personality! {travelPersonality && travelPersonality}.
 
 Here are a few tailored recommendations for your next adventure: </p>
 <div className='flex flex-col w-full gap-3 mt-10 sm:flex-row'>
