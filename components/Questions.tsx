@@ -18,6 +18,9 @@ export default function Questions() {
     const [travelImage, setTravelImage] = React.useState('')
     const [isSurveyDisplayed, setIsSurveyDisplayed] = React.useState(false)
 
+    function toggleSurvey(){
+        setIsSurveyDisplayed(prevStatus => !prevStatus)
+    }
     function handleChange(event: React.ChangeEvent<HTMLInputElement>){
         console.log('handle change')
         setUserInformation(prevUser => {
@@ -80,8 +83,9 @@ export default function Questions() {
             <h2 className='bold-32 lg:bold-40'>Discover your Travel Identity</h2>
             <p className='regular-16 text-gray-30 mt-5 mb-10'>Are you a true wanderer at heart, always seeking new adventures and exploring new horizons? Or do you prefer the comforts of home and the familiarity of your surroundings? Find out where you stand on the travel spectrum with our Travel Identity Survey. Travel identity is a unique and personal way to understand how you connect with the world through your travel experiences. It's about recognizing your travel preferences, exploring your comfort zones, and discovering the destinations and experiences that truly resonate with you.</p>
            
-            {!isSurveyDisplayed ? <Button type="button" title='Start the survey' theme='btn_green' icon="/user.svg"/> :
-            <form  onSubmit={handleSubmit} className='mt-5 overflow-y-auto max-h-96'>
+            {!isSurveyDisplayed ? <div onClick={toggleSurvey}><Button type="button" title='Start the survey' theme='btn_green' icon="/user.svg"/></div> :
+            
+            <form  onSubmit={handleSubmit} className='slide-in-fwd-center mt-5 overflow-y-auto max-h-96'>
 
                 <fieldset>
                     <legend className='mb-2'>What type of vacation experience do you prefer the most?</legend>

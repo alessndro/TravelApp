@@ -10,14 +10,14 @@ export default function Hero() {
         {/* LEFT SIDE OF HERO */}
         <div className='relative z-20  flex flex-1 flex-col lg:w-1/2'>
             <Image 
-                src="/camp.svg"
-                alt='camp icon'
+                src="/plane.svg"
+                alt='plane icon'
                 width={50}
                 height={50}
-                className='absolute left-[-5px] top-[-30px] w-10 lg:w-[50px]'
+                className='absolute left-[-5px] top-[-28px] w-10 lg:w-[50px]'
             />
              <h1 className='bold-52 lg:bold-88'>AI generated Personal Travel Plan</h1>
-             <p className='regular-16 text-gray-30 mt-5'>Lorem ipsum dolor do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+             <p className='regular-16 text-gray-30 mt-5'>Step into a world of personalized exploration where your journey begins with understanding your travel personality. Take our immersive travel personality test, and watch as your desires, curiosities, and dreams shape the path to your next great adventure. </p>
 
              <div className='flex items-center justify-start mt-5'>
                 <Image src='/star.svg' width={20} height={20} alt={'star'} />
@@ -29,8 +29,8 @@ export default function Hero() {
              </div>
 
              <div className='flex flex-col w-full gap-3 mt-10 sm:flex-row'>
-                <Button theme='btn_green' title="Start Now" type="button" />
-                <Button theme="btn_white_text" title="How Does it Work?" icon="/play.svg" />
+                <Button theme='btn_green' title="Start Personality test" type="button" />
+                <Button theme="btn_white_text" title="Directly to Travel Plan" icon="/play.svg" />
              </div>
         </div>
         <div className=' relative z-20  flex flex-1 flex-col  justify-start items-start lg:w-1/2'>
@@ -38,21 +38,23 @@ export default function Hero() {
                 
                 <div className='flex flex-row justify-between'>
                     <div className='flex flex-col mr-10'>
-                        <p className='text-gray-20 medium-14'>Location</p>
-                        <p className='text-white bold-16 '>Praia da Adraga</p>
+                        <p className='text-gray-20 medium-14'>Personality Test</p>
+                        <p className='text-white bold-16 '>Adventure Seeker</p>
                     </div>
                 </div>
 
                 <div className='flex flex-row mt-5'>
                     <div className='flex flex-col'>
-                        <p className='text-gray-20 text-sm'>Distance</p>
-                        <p className='text-white bold-16 '>215 km</p>
+                        <p className='text-gray-20 text-sm'>Suggested Location</p>
+                        <p className='text-white bold-16 '>Camping De Paris</p>
                     </div>
                     <div className='flex flex-col ml-10'>
-                        <p className='text-gray-20 text-sm'>Elvation</p>
-                        <p className='text-white bold-16 '>35 m</p>
+                        <p className='text-gray-20 text-sm'>Days</p>
+                        <p className='text-white bold-16 '>7</p>
                     </div>
+                    
                 </div>
+                
                 <Image className='absolute top-5 right-5' src='/white-close.png' width={20} height={5} alt={'star'} />
             </div>
         </div>

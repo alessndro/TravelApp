@@ -14,10 +14,10 @@ export default function Guide() {
                     className='absolute left-[-5px] top-[-35px]'
                 />
                 <p className='text-green-700'>WE ARE HERE FOR YOU</p>
-                <h2 className='bold-32 md:bold-40 mb-5 lg:max-w-xs'>Guide You to Easy Path</h2>
+                <h2 className='bold-32 md:bold-40 mb-5 lg:max-w-xs'>Tailored Adventures</h2>
             </div>
             <div className='lg:w-1/2'>
-                <p className='regular-16 text-gray-30'>Only with the hilink application you will no longer get lost and get lost again, because we already support offline maps when there is no internet connection in the field. Invite your friends, relatives and friends to have fun in the wilderness through the valley and reach the top of the mountain</p>
+                <p className='regular-16 text-gray-30'>Once we've uncovered your traveler's insight, our AI-driven platform designs an itinerary just for you. From awe-inspiring destinations to unforgettable experiences, your personalized travel plan is a masterpiece of discovery waiting to unfold. Discover your Traveler's Insight now and embark on a voyage that speaks to your heart, mind, and soul. Your extraordinary adventure begins here.</p>
             </div>
         </div>
         <div className='flex justify-center items-center border bg-bg-img-3 full-w relative z-0 sm:justify-start sm:items-start rounded-2xl'>
