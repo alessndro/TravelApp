@@ -37,8 +37,8 @@ export default function Features() {
                         />
                     </div>
                     <div className='bg-white-100'>
-                    <h3 className='bold-20 lg:bold-32 lg:mt-5'>Real Maps Can be Offline</h3>
-                        <p className='regular-14 text-gray-30 mt-2'>We provide a solution for you to be able to use our application when climbing, yes offline maps you can use at any time there is no signal at the location</p>
+                    <h3 className='bold-20 lg:bold-32 lg:mt-5'>Travel Personality Survey</h3>
+                        <p className='regular-14 text-gray-30 mt-2'>Discover your unique travel identity through our comprehensive Travel Personality Survey. Answer thought-provoking questions about your travel preferences, interests, and style to uncover the adventurer within you.</p>
                     </div>
                 </div>
 
@@ -52,8 +52,8 @@ export default function Features() {
                             className='flex-1'
                         />
                     </div>
-                    <h3 className='bold-20 lg:bold-32 lg:mt-5'>Real Maps Can be Offline</h3>
-                    <p className='regular-14 text-gray-30 mt-2'>We provide a solution for you to be able to use our application when climbing, yes offline maps you can use at any time there is no signal at the location</p>
+                    <h3 className='bold-20 lg:bold-32 lg:mt-5'>Cutting-Edge AI Technology</h3>
+                    <p className='regular-14 text-gray-30 mt-2'>We leverage state-of-the-art AI technology to create personalized travel itineraries tailored to your individuality. Our AI engine analyzes your survey responses and user profile to generate custom travel plans that perfectly align with your preferences.</p>
                 </div>
 
                 <div className='flex flex-col mt-5'>
@@ -66,8 +66,8 @@ export default function Features() {
                             className='flex-1'
                         />
                     </div>
-                    <h3 className='bold-20 lg:bold-32 lg:mt-5'>Real Maps Can be Offline</h3>
-                    <p className='regular-14 text-gray-30 mt-2'>We provide a solution for you to be able to use our application when climbing, yes offline maps you can use at any time there is no signal at the location</p>
+                    <h3 className='bold-20 lg:bold-32 lg:mt-5'>Location and Vacation Customization</h3>
+                    <p className='regular-14 text-gray-30 mt-2'>Your adventure starts with you. Share your starting location and vacation preferences, and watch as we customize your journey to match your desires. Whether you're looking for a serene escape or an action-packed adventure, we've got you covered</p>
                 </div>
 
                 <div className='flex flex-col mt-5'>

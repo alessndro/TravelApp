@@ -38,7 +38,7 @@ export default function Hero() {
                 
                 <div className='flex flex-row justify-between'>
                     <div className='flex flex-col mr-10'>
-                        <p className='text-gray-20 medium-14'>Personality Test</p>
+                        <p className='text-gray-20 medium-14'>Travel Personality</p>
                         <p className='text-white bold-16 '>Adventure Seeker</p>
                     </div>
                 </div>

@@ -7,8 +7,8 @@ export default function Guide() {
         <div className='flex flex-col lg:flex-row'>
             <div className='relative lg:w-1/2'>
                 <Image 
-                    src="/camp.svg"
-                    alt='camp icon'
+                    src="/plane.svg"
+                    alt='plane icon'
                     width={40}
                     height={40}
                     className='absolute left-[-5px] top-[-35px]'
@@ -28,7 +28,7 @@ export default function Guide() {
                     height={580}
                     className='w-full object-cover object-center overflow-hidden rounded-2xl'
                 />
-            <div className='p-5 flex justify-start shadow-2xl w-[250px] h-[150px] rounded-2xl absolute bg-white sm:mt-10 sm:ml-10'>
+            <div className='p-5 flex justify-start shadow-2xl w-[250px] h-[175px] rounded-2xl absolute bg-white sm:mt-10 sm:ml-10'>
             <Image 
                     src="/meter.svg"
                     alt='camp icon'
@@ -38,13 +38,13 @@ export default function Guide() {
                 />
                 <div className='flex flex-col'>
                     <div className=' ml-5'>
-                        <p className='text-gray-30 regular-14'>Destination<span className='text-green-500 ml-10 font-bold'>
-                            48 min</span></p>
-                        <p className='font-bold bold-10'>Aguas Calientes</p>
+                        <p className='text-gray-30 regular-14'>Activity<span className='text-green-500 ml-10 font-bold'>
+                            55 min</span></p>
+                        <p className='font-bold bold-10'>Kayaking Geneva</p>
                     </div>
                     <div className=' ml-5 mt-5'>
-                        <p className='text-gray-30 regular-14'>Current Location</p>
-                        <p className='font-bold bold-10'>Euteamo Muito</p>
+                        <p className='text-gray-30 regular-14'>Current Trip</p>
+                        <p className='font-bold bold-10'>Geneva Adventour: Day 2</p>
                     </div>
                 </div>
             </div>
