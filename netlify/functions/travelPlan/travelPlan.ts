@@ -12,7 +12,7 @@ export const handler: Handler = async (event) => {
   
   const inputObject = event.body ? JSON.parse(event.body) : null;
   // Now you can work with 'inputObject' as a parsed JavaScript object
-  
+  console.log(inputObject)
   if (inputObject) {
     // Now you can work with 'inputObject' as a parsed JavaScript object
     const response = await openai.completions.create({
