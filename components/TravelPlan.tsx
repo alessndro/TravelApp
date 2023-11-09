@@ -58,6 +58,8 @@ export default function travelPlan() {
         if (data){
             setGeneratedPlan(data)
         }
+        console.log('log generatedPlan')
+        console.log(generatedPlan)
     }
 
 return (
