@@ -68,7 +68,7 @@ return (
         {/* LEFT SIDE OF HERO */}
        <div className=' max-container padding-container py-10 2xl:py-20 gap-20 flex flex-col  md:flex-row '>
         
-        {!generatedPlan ? <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-3xl p-5 md:w-1/2'>
+        {!generatedPlan.title ? <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-3xl p-5 md:w-1/2'>
             <Image 
                 src="/plane.svg"
                 alt='plane icon'
