@@ -94,19 +94,19 @@ return (
                 <div className='mt-5'>
                     <h3 className='regular-16'>Your Vacation's Duration</h3>
                     <div>
-                    <input className="border w-full px-2 py-1" value={travelDetails.duration} onChange={handleChangeForm} name="duration" type='text' placeholder='2 Weeks'/>
+                        <input className="border w-full px-2 py-1" value={travelDetails.duration} onChange={handleChangeForm} name="duration" type='text' placeholder='2 Weeks'/>
                     </div>
                 </div>
                 <div className='mt-5'>
                     <h3 className='regular-16'>Your Maximum Budget</h3>
                     <div>
-                    <input className="border w-full px-2 py-1" value={travelDetails.budget} onChange={handleChangeForm} name="budget" type='text' placeholder='500 euro'/>
+                        <input className="border w-full px-2 py-1" value={travelDetails.budget} onChange={handleChangeForm} name="budget" type='text' placeholder='500 euro'/>
                     </div>
                 </div>
                 <div className='mt-5'>
                     <h3 className='regular-16'>Your Current Location</h3>
                     <div>
-                        <input className="border w-full px-2 py-1"  value={travelDetails.currentLocation} onChange={handleChangeForm}  name="locationn" type='text' placeholder='Netherlands'/>
+                        <input className="border w-full px-2 py-1"  value={travelDetails.currentLocation} onChange={handleChangeForm}  name="location" type='text' placeholder='Netherlands'/>
                     </div>
                 </div>
                 </form>
