@@ -150,7 +150,7 @@ return (
         </div> : <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-3xl p-5 md:w-1/2'>
         <h2 className='bold-32 lg:bold-52'>Embark on Your Dream Adventure </h2>
              <p className='regular-16 text-gray-30 mt-2'> Share your travel details, and we'll shape a one-of-a-kind journey tailored to your interests. Get started now and embark on a unique exploration. </p>
-             <div>
+            <div>
                 <p>{generatedPlan.title}</p>
                 <p>{generatedPlan.destination_city} in {generatedPlan.destination_country}</p>
                 <p>{generatedPlan.transport_method}</p>
@@ -190,7 +190,8 @@ return (
                 <Image className='absolute top-5 right-5' src='/white-close.png' width={20} height={5} alt={'star'} />
                
                 {/* // to be removed */}
-                {generatedPlan && <div>
+                <div>
+                    
                     <p>{generatedPlan.title}</p>
                     <p>{generatedPlan.destination_city} in {generatedPlan.destination_country}</p>
                     <p>{generatedPlan.transport_method}</p>
@@ -201,7 +202,7 @@ return (
                     })}</ol>
                     <p>{generatedPlan.residence}</p>
                     <p>{generatedPlan.short_summary}</p>
-                </div>}
+                </div>
 
 
             </div>
