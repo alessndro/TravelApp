@@ -21,7 +21,7 @@ export default function travelPlan() {
         residence: '',
         short_summary: ''
     });
-    
+    const [error, setError] = React.useState('')
 
     function handleChooseIdentity(name: string){
         console.log('handle choose')
@@ -45,21 +45,28 @@ export default function travelPlan() {
 
     async function handleSubmit(event: React.FormEvent<HTMLFormElement>){
         event.preventDefault();
-
-        const response = await fetch('https://gotravelapp.netlify.app/.netlify/functions/travelPlan', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify(travelDetails)
-        })
-        const data = await response.json()
-        console.log(data)
-        if (data){
-            setGeneratedPlan(data.value)
+        try {
+            const response = await fetch('https://gotravelapp.netlify.app/.netlify/functions/travelPlan', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json',
+                },
+                body: JSON.stringify(travelDetails)
+            })
+            if (!response.ok){
+                throw new Error('No connection with severless function')
+            }
+            const data = await response.json()
+            console.log(data)
+            if (data){
+                setGeneratedPlan(data.value)
+            }
+            console.log('log generatedPlan')
+            console.log(generatedPlan)
         }
-        console.log('log generatedPlan')
-        console.log(generatedPlan)
+        catch (error) {
+            console.log(error)
+        }
     }
 
 return (
