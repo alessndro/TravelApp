@@ -41,8 +41,8 @@ export default function travelPlan() {
             },
             body: JSON.stringify(travelDetails)
         })
-        console.log(response.json())
         const data = await response.json()
+        console.log(data)
     }
 
 return (
