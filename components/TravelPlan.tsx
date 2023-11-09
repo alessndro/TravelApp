@@ -69,9 +69,9 @@ export default function travelPlan() {
             console.log('data.value with " removed')
             console.log(data.value.replace(/"/g, ''))
 
-            console.log('@@ typeof data.value with " removed')
-            console.log(data.value.replace(/"/g, ''))
+            console.log('dataObject')
             const dataObject = data.value.replace(/"/g, '')
+            console.log(dataObject)
 
             console.log('@@ typeof data.value with " removed')
             console.log(typeof dataObject)
