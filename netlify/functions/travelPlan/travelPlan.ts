@@ -16,7 +16,7 @@ export const handler: Handler = async (event) => {
     // Now you can work with 'inputObject' as a parsed JavaScript object
     const response = await openai.completions.create({
       model: 'text-davinci-003',
-      prompt: `You are creating a short travel plan based on the user's travel personality, vacation's duration, maximum budget and current location. You're a vibrant and passionate travel planner. Return your result in the form of an object. You're Only allowed to return in JSON format!
+      prompt: `You are creating a short travel plan based on the user's travel personality, vacation's duration, maximum budget and current location. Use the current location and budget to calculate the radius of the destination's city and country. You're a vibrant and passionate travel planner. Return your result in the form of an object. You're Only allowed to return in JSON format!
       ***
       users answers on survey:
       travel personality: Adventure Seeker
