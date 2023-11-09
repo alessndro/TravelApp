@@ -60,26 +60,26 @@ export default function travelPlan() {
             const data = await response.json()
             console.log('data')
             console.log(data)
-            console.log('data.value')
+            console.log('1. data.value')
             console.log(data.value)
         
-            console.log('type of the return data.value')
+            console.log('1. type of the return data.value')
             console.log(typeof data.value)
 
-            console.log('data.value with " removed')
+            console.log('2. data.value with " removed')
             console.log(data.value.replace(/"/g, ''))
 
-            console.log('dataObject')
+            console.log('2. dataObject')
             const dataObject = data.value.replace(/"/g, '')
             console.log(dataObject)
 
-            console.log('@@ typeof data.value with " removed')
+            console.log('2. @@ typeof data.value with " removed')
             console.log(typeof dataObject)
 
-            console.log('### check type of json.parse dataObject')
-            console.log(typeof JSON.parse(dataObject))
+            // console.log('### check type of json.parse dataObject')
+            // console.log(typeof JSON.parse(dataObject))
             // Because the object is a string, remove these "'s around the object
-            setGeneratedPlan(JSON.parse(dataObject))
+            // setGeneratedPlan(dataObject)
         }
         catch (error) {
             console.log(error)
