@@ -12,8 +12,6 @@ export const handler: Handler = async (event) => {
   
   const inputObject = event.body ? JSON.parse(event.body) : null;
   // Now you can work with 'inputObject' as a parsed JavaScript object
-  console.log(inputObject)
-  console.log(inputObject.title)
   if (inputObject) {
     // Now you can work with 'inputObject' as a parsed JavaScript object
     const response = await openai.completions.create({
@@ -26,7 +24,7 @@ export const handler: Handler = async (event) => {
       maximum budget: 500
       current location: Netherlands
       ***
-      return:  {
+      {
         title: 'Nordic Adventure Quest"',
         destination_city: 'Tromsø',
         destination_country: 'Norway',
@@ -50,7 +48,7 @@ export const handler: Handler = async (event) => {
       maximum budget: ${inputObject.budget}
       current location: ${inputObject.currentLocation}
       ***
-      Your response: {}.
+      {}.
       `,
       max_tokens: 500,
     });

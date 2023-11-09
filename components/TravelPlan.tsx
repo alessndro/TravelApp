@@ -10,7 +10,18 @@ export default function travelPlan() {
         budget: '',
         currentLocation:'',  
     })
-    // const [travelPlan, setTravelPlan] = React.useState({})
+    const [generatedPlan, setGeneratedPlan] = React.useState({
+        title: '',
+        destination_city: '',
+        destination_country: '',
+        transport_method: '',
+        transport_time: '',
+        budget: '',
+        activities: [],
+        residence: '',
+        short_summary: ''
+    });
+    
 
     function handleChooseIdentity(name: string){
         console.log('handle choose')
@@ -44,10 +55,9 @@ export default function travelPlan() {
         })
         const data = await response.json()
         console.log(data)
-        // if (data){
-        //     setTravelPlan(data)
-        // }
-        console.log(travelPlan)
+        if (data){
+            setGeneratedPlan(data)
+        }
     }
 
 return (
@@ -56,8 +66,9 @@ return (
     
         
         {/* LEFT SIDE OF HERO */}
-        <div className='max-container padding-container py-10 2xl:py-20 gap-20 flex flex-col  md:flex-row '>
-        <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-3xl p-5 md:w-1/2'>
+       <div className=' max-container padding-container py-10 2xl:py-20 gap-20 flex flex-col  md:flex-row '>
+        
+        {!generatedPlan ? <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-3xl p-5 md:w-1/2'>
             <Image 
                 src="/plane.svg"
                 alt='plane icon'
@@ -65,10 +76,8 @@ return (
                 height={50}
                 className='absolute left-[15px] top-[-15px] w-10 lg:w-[50px]'
             />
-             <h1 className='bold-32 lg:bold-52'>Let's Craft Your Journey! </h1>
+             <h2 className='bold-32 lg:bold-52'>Let's Craft Your Journey! </h2>
              <p className='regular-16 text-gray-30 mt-2'> Share your travel details, and we'll shape a one-of-a-kind journey tailored to your interests. Get started now and embark on a unique exploration. </p>
-
-             
             <div className='my-3'>
                 <h3 className='mb-2'>Choose your personality</h3>
                 <div className='flex flex-row overflow-y-hidden overflow-x-auto gap-1 '>
@@ -119,9 +128,24 @@ return (
                 <Button theme="btn_white_text" title="Finish Travel Identity test first" icon="/play.svg" />
              </div>
              </form>
-            </div>
+            </div> 
            
-        </div>
+        </div> : <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-3xl p-5 md:w-1/2'>
+        <h2 className='bold-32 lg:bold-52'>Embark on Your Dream Adventure </h2>
+             <p className='regular-16 text-gray-30 mt-2'> Share your travel details, and we'll shape a one-of-a-kind journey tailored to your interests. Get started now and embark on a unique exploration. </p>
+             <div>
+                <p>{generatedPlan.title}</p>
+                <p>{generatedPlan.destination_city} in {generatedPlan.destination_country}</p>
+                <p>{generatedPlan.transport_method}</p>
+                <p>{generatedPlan.transport_time}</p>
+                <p>{generatedPlan.budget}</p>
+                <ol>{generatedPlan.activities.map((activity) => {
+                    return <li><p>{activity}</p></li>
+                })}</ol>
+                <p>{generatedPlan.residence}</p>
+                <p>{generatedPlan.short_summary}</p>
+            </div>
+        </div> }
         <div className='relative z-20  flex flex-1 flex-col  justify-center items-start md:w-1/2'>
 
             <div className='hidden absolute top-0 md:flex bg-green-90 rounded-3xl px-5 py-5'>
