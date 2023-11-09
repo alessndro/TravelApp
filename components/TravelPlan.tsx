@@ -56,7 +56,7 @@ export default function travelPlan() {
         const data = await response.json()
         console.log(data)
         if (data){
-            setGeneratedPlan(data)
+            setGeneratedPlan(data.value)
         }
         console.log('log generatedPlan')
         console.log(generatedPlan)
