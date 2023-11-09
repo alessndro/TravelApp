@@ -68,7 +68,13 @@ export default function travelPlan() {
 
             console.log('data.value with " removed')
             console.log(data.value.replace(/"/g, ''))
-            const dataObject = data.value.replace(data.value.replace(/"/g, ''))
+
+            console.log('@@ typeof data.value with " removed')
+            console.log(data.value.replace(/"/g, ''))
+            const dataObject = data.value.replace(/"/g, '')
+
+            console.log('@@ typeof data.value with " removed')
+            console.log(typeof dataObject)
             // Because the object is a string, remove these "'s around the object
             setGeneratedPlan(dataObject)
         }
