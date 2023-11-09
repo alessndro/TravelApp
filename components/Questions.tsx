@@ -35,7 +35,7 @@ export default function Questions() {
         event.preventDefault()
         console.log('submit')
     
-        const url = 'https://main--gotravelapp.netlify.app/.netlify/functions/travelIdentity'
+        const url = 'https://gotravelapp.netlify.app/.netlify/functions/travelIdentity'
             
         const response = await fetch(url, {
             method: 'POST',
@@ -78,6 +78,7 @@ export default function Questions() {
     }, [travelIdentity])
     
     return (
+        
     <section className='container max-container padding-container flex flex-col py-10 2xl:py-20 lg:flex-row'>
         {!showIdentity && <div className='lg:w-1/2 border'>
             <h2 className='bold-32 lg:bold-40'>Discover your Travel Identity</h2>
