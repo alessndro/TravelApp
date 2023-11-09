@@ -43,6 +43,7 @@ export default function travelPlan() {
             body: JSON.stringify(travelDetails)
         })
         const data = await response.json()
+        console.log(data)
         if (data){
             setTravelPlan(data)
         }
