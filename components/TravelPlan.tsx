@@ -21,6 +21,7 @@ export default function travelPlan() {
         residence: '',
         short_summary: ''
     });
+
     const [error, setError] = React.useState('')
 
     function handleChooseIdentity(name: string){
@@ -61,6 +62,8 @@ export default function travelPlan() {
             console.log(data)
             console.log('data.value')
             console.log(data.value)
+            console.log('data.value.title')
+            console.log(data.value.title)
             setGeneratedPlan(data.value)
         }
         catch (error) {
