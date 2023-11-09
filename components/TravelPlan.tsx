@@ -109,12 +109,13 @@ return (
                         <input className="border w-full px-2 py-1"  value={travelDetails.currentLocation} onChange={handleChangeForm}  name="currentLocation" type='text' placeholder='Netherlands'/>
                     </div>
                 </div>
-                </form>
-            </div>
-             <div className='flex flex-col w-full gap-3 mt-5 xl:flex-row'>
+                <div className='flex flex-col w-full gap-3 mt-5 xl:flex-row'>
                 <Button theme='btn_green' title="Create Travel Plan" type="button" />
                 <Button theme="btn_white_text" title="Finish Travel Identity test first" icon="/play.svg" />
              </div>
+             </form>
+            </div>
+           
         </div>
         <div className='relative z-20  flex flex-1 flex-col  justify-center items-start md:w-1/2'>
 

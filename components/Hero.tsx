@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Button from './Button';
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -29,8 +30,8 @@ export default function Hero() {
              </div>
 
              <div className='flex flex-col w-full gap-3 mt-10 sm:flex-row'>
-                <Button theme='btn_green' title="Start Personality test" type="button" />
-                <Button theme="btn_white_text" title="Directly to Travel Plan" icon="/play.svg" />
+                <Link href="/personality">   <Button theme='btn_green' title="Start Personality test" type="button" /></Link>
+                <Link href="/travelItenary"> <Button theme="btn_white_text" title="Directly to Travel Plan" icon="/play.svg" /></Link>
              </div>
         </div>
         <div className=' relative z-20  flex flex-1 flex-col  justify-start items-start lg:w-1/2'>
