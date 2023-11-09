@@ -22,7 +22,7 @@ export default function Features() {
                 height={50}
                 className='absolute left-[-5px] top-[-40px] w-10 lg:w-[50px]'
             />
-             <h2 className='bold-32 md:bold-40 lg:mb-10'>Our features</h2>
+             <h2 className='bold-32 md:bold-40 lg:mb-10'>How Does Traveler's Insight Work?</h2>
         
              <div className='flex flex-col lg:grid lg:grid-cols-2 lg:gap-10'>
                 
