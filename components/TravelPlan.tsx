@@ -61,11 +61,7 @@ export default function travelPlan() {
             console.log(data)
             console.log('data.value')
             console.log(data.value)
-            if (data){
-                setGeneratedPlan(data.value)
-            }
-            console.log('log generatedPlan')
-            console.log(generatedPlan)
+            setGeneratedPlan(data.value)
         }
         catch (error) {
             console.log(error)
