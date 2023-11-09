@@ -10,6 +10,7 @@ export default function travelPlan() {
         budget: '',
         currentLocation:'',  
     })
+    const [travelPlan, setTravelPlan] = React.useState({})
 
     function handleChooseIdentity(name: string){
         console.log('handle choose')
@@ -42,7 +43,10 @@ export default function travelPlan() {
             body: JSON.stringify(travelDetails)
         })
         const data = await response.json()
-        console.log(data)
+        if (data){
+            setTravelPlan(data)
+        }
+        console.log(travelPlan)
     }
 
 return (
@@ -142,6 +146,7 @@ return (
                
                 
                 <Image className='absolute top-5 right-5' src='/white-close.png' width={20} height={5} alt={'star'} />
+               
             </div>
             <Image className='hidden md:flex' src='/travelHeroIcon1.png' width={2500} height={1500} alt={'star'} />
         </div>
