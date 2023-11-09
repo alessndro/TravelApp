@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Guide() {
   return (
-    <section className='border-2 border-red-500 container max-container padding-container flex flex-col gap-20 py-10 2xl:py-20'>
+    <section className=' container max-container padding-container flex flex-col gap-20 py-10 2xl:py-20'>
         <div className='flex flex-col lg:flex-row'>
             <div className='relative lg:w-1/2'>
                 <Image 

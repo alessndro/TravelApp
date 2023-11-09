@@ -14,6 +14,13 @@ body {
   font-family: Inter;
 }
 
+.hero-travelplan
+{
+  background-image: url('/travelHero2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .fade-in {
 	animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }

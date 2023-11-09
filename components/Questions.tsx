@@ -432,7 +432,7 @@ Here are a few tailored recommendations for your next adventure: </p>
                 alt='image personality'
                 width={700}
                 height={400}
-                className='border w-full'
+                className='slide-in-fwd-center border w-full'
             />
         </div>
     </section>

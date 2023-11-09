@@ -20,8 +20,8 @@ export default function Navbar() {
             <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/personality">
                 Personality Test
             </Link>
-            <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/">
-                Travel plan
+            <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/travelItenary">
+                Travel Itenary
             </Link>
         </div>
 
@@ -36,14 +36,11 @@ export default function Navbar() {
             
         
             <div className='flex flex-col items-center justify-center gap-3'>
-                <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/">
-                    Test1
+                <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/personality">
+                    Personality Test
                 </Link>
-                <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/">
-                    Test2
-                </Link>
-                <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/destination">
-                    Destination
+                <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/travelItenary">
+                    Travel Itenary
                 </Link>
 
                 <div className='flex' >

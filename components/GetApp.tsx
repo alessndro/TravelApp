@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function GetApp() {
   return (
-    <section className='border-2 border-red-500 container max-container flex flex-col py-10 2xl:py-20 lg:padding-container'>
+    <section className=' container max-container flex flex-col py-10 2xl:py-20 lg:padding-container'>
         <div className='border flex flex-col border-green-500 p-5 relative w-full bg-pattern bg-center bg-cover bg-no-repeat px-6 py-12 text-white gap-10 lg:px-20 md:flex-row md:rounded-2xl lg:rounded-3xl'>
             
             <div className='flex flex-col justify-center sm:w-1/2'>
@@ -21,7 +21,7 @@ export default function GetApp() {
                 </div>
             </div>
             <div className='flex justify-center items-center'>
-                <Image src="/phones.png" alt="phones" width={350} height={370} />
+                <Image src="/phones1.png" alt="phones" width={350} height={370} />
             </div>
        </div>
     </section>

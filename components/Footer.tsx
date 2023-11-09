@@ -8,7 +8,7 @@ export default function Footer() {
             <div className="md:py-8">
                 <div className="flex justify-between items-center">                
                     <Link href="/">
-                        <Image src='/hilink-logo.svg' alt='logo' width={74} height={29}/>
+                        <h3 className='bold-18'>Traveler's Insight</h3>
                     </Link>
                         <div className=' flex gap-2'>
                             <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/">

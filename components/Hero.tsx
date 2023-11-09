@@ -16,7 +16,7 @@ export default function Hero() {
                 height={50}
                 className='absolute left-[-5px] top-[-28px] w-10 lg:w-[50px]'
             />
-             <h1 className='bold-52 lg:bold-88'>AI generated Personal Travel Plan</h1>
+             <h1 className='bold-52 lg:bold-64'>Let's Craft Your Dream Journey! </h1>
              <p className='regular-16 text-gray-30 mt-5'>Step into a world of personalized exploration where your journey begins with understanding your travel personality. Take our immersive travel personality test, and watch as your desires, curiosities, and dreams shape the path to your next great adventure. </p>
 
              <div className='flex items-center justify-start mt-5'>
@@ -25,7 +25,7 @@ export default function Hero() {
                 <Image src='/star.svg' width={20} height={20} alt={'star'} />
                 <Image src='/star.svg' width={20} height={20} alt={'star'} />
                 <Image src='/star.svg' width={20} height={20} alt={'star'} />
-                <p className='ml-5 medium-14'>198k<span className='ml-1 text-gray-30'>Verified Reviews</span></p>
+                <p className='ml-5 medium-14'>50k<span className='ml-1 text-gray-30'>Verified Reviews</span></p>
              </div>
 
              <div className='flex flex-col w-full gap-3 mt-10 sm:flex-row'>
