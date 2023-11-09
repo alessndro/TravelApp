@@ -64,7 +64,7 @@ return (
              <p className='regular-16 text-gray-30 mt-2'> Share your travel details, and we'll shape a one-of-a-kind journey tailored to your interests. Get started now and embark on a unique exploration. </p>
 
              
-            <div className='mt-3'>
+            <div className='my-3'>
                 <h3 className='mb-2'>Choose your personality</h3>
                 <div className='flex flex-row overflow-y-hidden overflow-x-auto gap-1 '>
                     <div onClick={() => handleChooseIdentity('Culture and City Explorer')} className={`${travelDetails.identity === 'Culture and City Explorer' ? ' border-black' : ''} border flex flex-col items-center flex-shrink-0 rounded-2xl shadow-xl`}>
@@ -92,21 +92,21 @@ return (
             <div className='max-w-lg'>
                 <form onSubmit={handleSubmit}>
                 <div className='mt-5'>
-                    <h3 className='regular-16'>Your Vacation's Duration</h3>
+                    <h3 className='regular-16 mb-2'>Your Vacation's Duration</h3>
                     <div>
                         <input className="border w-full px-2 py-1" value={travelDetails.duration} onChange={handleChangeForm} name="duration" type='text' placeholder='2 Weeks'/>
                     </div>
                 </div>
                 <div className='mt-5'>
-                    <h3 className='regular-16'>Your Maximum Budget</h3>
+                    <h3 className='regular-16 mb-2'>Your Maximum Budget</h3>
                     <div>
                         <input className="border w-full px-2 py-1" value={travelDetails.budget} onChange={handleChangeForm} name="budget" type='text' placeholder='500 euro'/>
                     </div>
                 </div>
                 <div className='mt-5'>
-                    <h3 className='regular-16'>Your Current Location</h3>
+                    <h3 className='regular-16 mb-2'>Your Current Location</h3>
                     <div>
-                        <input className="border w-full px-2 py-1"  value={travelDetails.currentLocation} onChange={handleChangeForm}  name="location" type='text' placeholder='Netherlands'/>
+                        <input className="border w-full px-2 py-1"  value={travelDetails.currentLocation} onChange={handleChangeForm}  name="currentLocation" type='text' placeholder='Netherlands'/>
                     </div>
                 </div>
                 </form>
