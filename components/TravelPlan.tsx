@@ -75,8 +75,11 @@ export default function travelPlan() {
 
             console.log('@@ typeof data.value with " removed')
             console.log(typeof dataObject)
+
+            console.log('### check type of json.parse dataObject')
+            console.log(typeof JSON.parse(dataObject))
             // Because the object is a string, remove these "'s around the object
-            setGeneratedPlan(dataObject)
+            setGeneratedPlan(JSON.parse(dataObject))
         }
         catch (error) {
             console.log(error)
