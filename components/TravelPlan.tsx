@@ -189,6 +189,21 @@ return (
                 
                 <Image className='absolute top-5 right-5' src='/white-close.png' width={20} height={5} alt={'star'} />
                
+                {/* // to be removed */}
+                {generatedPlan && <div>
+                    <p>{generatedPlan.title}</p>
+                    <p>{generatedPlan.destination_city} in {generatedPlan.destination_country}</p>
+                    <p>{generatedPlan.transport_method}</p>
+                    <p>{generatedPlan.transport_time}</p>
+                    <p>{generatedPlan.budget}</p>
+                    <ol>{generatedPlan.activities.map((activity) => {
+                        return <li><p>{activity}</p></li>
+                    })}</ol>
+                    <p>{generatedPlan.residence}</p>
+                    <p>{generatedPlan.short_summary}</p>
+                </div>}
+
+
             </div>
             <Image className='hidden md:flex' src='/travelHeroIcon1.png' width={2500} height={1500} alt={'star'} />
         </div>
