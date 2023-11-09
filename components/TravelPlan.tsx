@@ -57,7 +57,7 @@ export default function travelPlan() {
                 throw new Error('No connection with severless function')
             }
             const data = await response.json()
-            console.log(data)
+            console.log(data.value)
             if (data){
                 setGeneratedPlan(data.value)
             }
