@@ -54,9 +54,9 @@ export default function travelPlan() {
                 },
                 body: JSON.stringify(travelDetails)
             })
-            if (!response.ok){
-                throw new Error('No connection with severless function')
-            }
+            // if (!response.ok){
+            //     throw new Error('No connection with severless function')
+            // }
             const data = await response.json()
             console.log('data')
             console.log(data)
