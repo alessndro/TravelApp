@@ -10,7 +10,7 @@ export default function travelPlan() {
         budget: '',
         currentLocation:'',  
     })
-    const [travelPlan, setTravelPlan] = React.useState({})
+    // const [travelPlan, setTravelPlan] = React.useState({})
 
     function handleChooseIdentity(name: string){
         console.log('handle choose')
@@ -44,9 +44,9 @@ export default function travelPlan() {
         })
         const data = await response.json()
         console.log(data)
-        if (data){
-            setTravelPlan(data)
-        }
+        // if (data){
+        //     setTravelPlan(data)
+        // }
         console.log(travelPlan)
     }
 
