@@ -75,6 +75,9 @@ export default function travelPlan() {
         catch (error) {
             console.log(error)
         }
+        finally {
+            console.log(generatedPlan)
+        }
     }
 
 return (
@@ -151,7 +154,7 @@ return (
         <h2 className='bold-32 lg:bold-52'>Embark on Your Dream Adventure </h2>
              <p className='regular-16 text-gray-30 mt-2'> Share your travel details, and we'll shape a one-of-a-kind journey tailored to your interests. Get started now and embark on a unique exploration. </p>
             <div>
-                <p>{generatedPlan.title}</p>
+                {/* <p>{generatedPlan.title}</p>
                 <p>{generatedPlan.destination_city} in {generatedPlan.destination_country}</p>
                 <p>{generatedPlan.transport_method}</p>
                 <p>{generatedPlan.transport_time}</p>
@@ -160,7 +163,7 @@ return (
                     return <li><p>{activity}</p></li>
                 })}</ol>
                 <p>{generatedPlan.residence}</p>
-                <p>{generatedPlan.short_summary}</p>
+                <p>{generatedPlan.short_summary}</p> */}
             </div>
         </div> }
         <div className='relative z-20  flex flex-1 flex-col  justify-center items-start md:w-1/2'>
@@ -188,23 +191,7 @@ return (
                
                 
                 <Image className='absolute top-5 right-5' src='/white-close.png' width={20} height={5} alt={'star'} />
-               
-                {/* // to be removed */}
-                <div>
-                    
-                    <p>{generatedPlan.title}</p>
-                    <p>{generatedPlan.destination_city} in {generatedPlan.destination_country}</p>
-                    <p>{generatedPlan.transport_method}</p>
-                    <p>{generatedPlan.transport_time}</p>
-                    <p>{generatedPlan.budget}</p>
-                    <ol>{generatedPlan.activities.map((activity) => {
-                        return <li><p>{activity}</p></li>
-                    })}</ol>
-                    <p>{generatedPlan.residence}</p>
-                    <p>{generatedPlan.short_summary}</p>
-                </div>
-
-
+    
             </div>
             <Image className='hidden md:flex' src='/travelHeroIcon1.png' width={2500} height={1500} alt={'star'} />
         </div>
