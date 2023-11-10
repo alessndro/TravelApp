@@ -18,10 +18,10 @@ export default function Navbar() {
 
         <div className='hidden gap-5 lg:flex'>
             <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/personality">
-                Personality Test
+                Travel Personality
             </Link>
             <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/travelItenary">
-                Travel Itenary
+                Travel Plan
             </Link>
         </div>
 
@@ -37,10 +37,10 @@ export default function Navbar() {
         
             <div className='flex flex-col items-center justify-center gap-3'>
                 <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/personality">
-                    Personality Test
+                    Travel Personality 
                 </Link>
                 <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/travelItenary">
-                    Travel Itenary
+                    Travel Plan
                 </Link>
 
                 <div className='flex' >

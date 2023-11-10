@@ -2,11 +2,12 @@
 import React from 'react';
 import Image from 'next/image';
 import Button from './Button';
-
+import Link from 'next/link'
 export default function travelPlan() {
     const [travelDetails, setTravelDetails] = React.useState({
         identity: '',
         duration: '',
+        persons: '',
         budget: '',
         currentLocation:'',  
     })
@@ -18,8 +19,8 @@ export default function travelPlan() {
         transport_time: '',
         budget: '',
         activities: [],
-        residence: '',
-        short_summary: ''
+        residence: "",
+        short_summary: ""
     });
 
     const [error, setError] = React.useState('')
@@ -127,6 +128,12 @@ return (
                     </div>
                 </div>
                 <div className='mt-5'>
+                    <h3 className='regular-16 mb-2'>Amount of persons</h3>
+                    <div>
+                        <input className="border w-full px-2 py-1"  value={travelDetails.persons} onChange={handleChangeForm}  name="persons" type='text' placeholder='2 persons'/>
+                    </div>
+                </div>
+                <div className='mt-5'>
                     <h3 className='regular-16 mb-2'>Your Maximum Budget</h3>
                     <div>
                         <input className="border w-full px-2 py-1" value={travelDetails.budget} onChange={handleChangeForm} name="budget" type='text' placeholder='500 euro'/>
@@ -145,26 +152,55 @@ return (
              </form>
             </div> 
            
-        </div> : <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-3xl p-5 md:w-1/2'>
-        <h2 className='bold-32 lg:bold-52'>Embark on Your Dream Adventure </h2>
-             <p className='regular-16 text-gray-30 mt-2'> Share your travel details, and we'll shape a one-of-a-kind journey tailored to your interests. Get started now and embark on a unique exploration. </p>
-            <div>
-                <p>{generatedPlan.title}</p>
-                <p>{generatedPlan.destination_city} in {generatedPlan.destination_country}</p>
-                <p>{generatedPlan.transport_method}</p>
-                <p>{generatedPlan.transport_time}</p>
-                <p>{generatedPlan.budget}</p>
-                <ol>{generatedPlan.activities.map((activity) => {
-                    return <li><p>{activity}</p></li>
-                })}</ol>
-                <p>{generatedPlan.residence}</p>
-                <p>{generatedPlan.short_summary}</p>
+        </div> : 
+        <div className='flex flex-col gap-10 md:w-1/2'>
+            <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-2xl p-5'>
+                <Image 
+                    src="/plane.svg"
+                    alt='plane icon'
+                    width={50}
+                    height={50}
+                    className='absolute left-[15px] top-[-15px] w-10 lg:w-[50px]'
+                />
+                <h2 className='bold-32 lg:bold-52'>Your Personal Travel Plan</h2>
+                <p className='regular-16 text-gray-30 my-2'> Share your travel details, and we'll shape a one-of-a-kind journey tailored to your interests. Get started now and embark on a unique exploration. Don't forget to leave a review! </p>
+                <div className='flex items-center justify-start mt-5'>
+                <Image src='/star.svg' width={20} height={20} alt={'star'} />
+                <Image src='/star.svg' width={20} height={20} alt={'star'} />
+                <Image src='/star.svg' width={20} height={20} alt={'star'} />
+                <Image src='/star.svg' width={20} height={20} alt={'star'} />
+                <Image src='/star.svg' width={20} height={20} alt={'star'} />
+                <p className='ml-5 medium-14'>50k<span className='ml-1 text-gray-30'>Verified Reviews</span></p>
+             </div>
+                <div className='flex flex-col w-full gap-3 mt-10 sm:flex-row'>
+                    <Button theme='btn_green' title="Share your plan" type="button" />
+                    <Link href="/travelItenary"> <Button theme="btn_white_text" title="Write an review" icon="/play.svg" /></Link>
+                </div>
+            </div>
+            <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-2xl p-5'>
+                <div>
+                    <h3 className='bold-20 lg:bold-32 my-2 lg:my-4'>{generatedPlan.title}</h3>
+                    <div className='flex flex-row my-2 lg:my-4'>
+                        <p className='w-1/2'><span className='bold-16'>Location:</span> {generatedPlan.destination_city} in {generatedPlan.destination_country}</p>
+                        <p className='w-1/2'><span className='bold-16'>Budget:</span> {generatedPlan.budget}</p>
+                    </div>
+                    <div className='flex flex-row my-2 lg:my-4'>
+                        <p className='w-1/2'><span className='bold-16'>Transport:</span> {generatedPlan.transport_method}</p>
+                        <p className='w-1/2'><span className='bold-16'>Duration:</span> {generatedPlan.transport_time}</p>
+                    </div>
+                    <p className='bold-16'>Activities:</p>
+                    <ol>{generatedPlan.activities.map((activity) => {
+                        return <li><p className='mb-3'>- {activity}</p></li>
+                    })}</ol>
+                    <p className='my-2 lg:my-4'><span className='bold-16'>Residence:</span><br></br> {generatedPlan.residence}</p>
+                    <p className='my-2 lg:my-4'><span className='bold-16'>Short summary:</span><br></br> {generatedPlan.short_summary}</p>
+                </div>
             </div>
         </div> }
         <div className='relative z-20  flex flex-1 flex-col  justify-center items-start md:w-1/2'>
 
             <div className='hidden absolute top-0 md:flex bg-green-90 rounded-3xl px-5 py-5'>
-                
+                {!generatedPlan.title ?
                 <div className='flex flex-row justify-between'>
                     <div className='flex flex-col mr-10'>
                         <p className='text-gray-20 medium-14'>Your Travel Plan</p>
@@ -172,23 +208,18 @@ return (
                     </div>
                 </div>
 
-                {/* <div className='flex flex-row mt-5'>
-                    <div className='flex flex-col'>
-                        <p className='text-gray-20 text-sm'>Suggested Location</p>
-                        <p className='text-white bold-16 '>Camping De Paris</p>
+            
+                : <div className='flex flex-row justify-between'>
+                    <div className='flex flex-col mr-10'>
+                    <p className='text-gray-20 medium-14'>Your Travel Plan</p>
+                    <p className='text-white bold-16'>{generatedPlan.title}</p>
                     </div>
-                    <div className='flex flex-col ml-10'>
-                        <p className='text-gray-20 text-sm'>Days</p>
-                        <p className='text-white bold-16 '>7</p>
-                    </div>
-                    
-                </div> */}
-               
-                
+                </div>}
                 <Image className='absolute top-5 right-5' src='/white-close.png' width={20} height={5} alt={'star'} />
     
             </div>
-            <Image className='hidden md:flex' src='/travelHeroIcon1.png' width={2500} height={1500} alt={'star'} />
+            <Image className='hidden md:flex' src='/gotravel.svg' width={3500} height={2500} alt={'star'} />
+            
         </div>
         </div>
        
