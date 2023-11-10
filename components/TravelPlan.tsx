@@ -60,11 +60,18 @@ export default function travelPlan() {
             const data = await response.json()
             console.log('data')
             console.log(data)
-            console.log('1. data.value')
+            console.log('1. JSON STRING')
             console.log(data.value)
         
             console.log('1. type of the return data.value')
             console.log(typeof data.value)
+
+            console.log('10 nov - JSON string to Javascript object')
+            let travelData = JSON.parse(data.value);
+            
+            console.log('traveldata')
+            console.log(travelData)
+            console.log(typeof travelData)
 
             console.log('2. data.value with " removed')
             console.log(data.value.replace(/"/g, ''))
