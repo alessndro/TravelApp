@@ -58,13 +58,6 @@ export default function travelPlan() {
             //     throw new Error('No connection with severless function')
             // }
             const data = await response.json()
-            console.log('data')
-            console.log(data)
-            console.log('1. JSON STRING')
-            console.log(data.value)
-        
-            console.log('1. type of the return data.value')
-            console.log(typeof data.value)
 
             console.log('10 nov - JSON string to Javascript object')
             let travelData = JSON.parse(data.value);
@@ -72,21 +65,7 @@ export default function travelPlan() {
             console.log('traveldata')
             console.log(travelData)
             console.log(typeof travelData)
-
-            console.log('2. data.value with " removed')
-            console.log(data.value.replace(/"/g, ''))
-
-            console.log('2. dataObject')
-            const dataObject = data.value.replace(/"/g, '')
-            console.log(dataObject)
-
-            console.log('2. @@ typeof data.value with " removed')
-            console.log(typeof dataObject)
-
-            // console.log('### check type of json.parse dataObject')
-            // console.log(typeof JSON.parse(dataObject))
-            // Because the object is a string, remove these "'s around the object
-            // setGeneratedPlan(dataObject)
+            setGeneratedPlan(travelData)
         }
         catch (error) {
             console.log(error)
@@ -170,7 +149,7 @@ return (
         <h2 className='bold-32 lg:bold-52'>Embark on Your Dream Adventure </h2>
              <p className='regular-16 text-gray-30 mt-2'> Share your travel details, and we'll shape a one-of-a-kind journey tailored to your interests. Get started now and embark on a unique exploration. </p>
             <div>
-                {/* <p>{generatedPlan.title}</p>
+                <p>{generatedPlan.title}</p>
                 <p>{generatedPlan.destination_city} in {generatedPlan.destination_country}</p>
                 <p>{generatedPlan.transport_method}</p>
                 <p>{generatedPlan.transport_time}</p>
@@ -179,7 +158,7 @@ return (
                     return <li><p>{activity}</p></li>
                 })}</ol>
                 <p>{generatedPlan.residence}</p>
-                <p>{generatedPlan.short_summary}</p> */}
+                <p>{generatedPlan.short_summary}</p>
             </div>
         </div> }
         <div className='relative z-20  flex flex-1 flex-col  justify-center items-start md:w-1/2'>
