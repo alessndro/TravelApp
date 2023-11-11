@@ -97,75 +97,78 @@ return (
             />
              <h2 className='bold-32 lg:bold-52'>Let's Craft Your Journey! </h2>
              <p className='regular-16 text-gray-30 mt-2'> Share your travel details, and we'll shape a one-of-a-kind journey tailored to your interests. Get started now and embark on a unique exploration. </p>
-            <div className='my-3'>
-                {loading ? <div className='flex w-full h-full items-center justify-center'><Image 
-                src="/loadingTravel.svg"
-                alt='loading icon'
-                width={50}
-                height={50}
-                className=''
-            /></div> :
-                <>
-                <h3 className='mb-2'>Choose your personality</h3>
-                <div className='flex flex-row overflow-y-hidden overflow-x-auto gap-1 '>
-                    <div onClick={() => handleChooseIdentity('Culture and City Explorer')} className={`${travelDetails.identity === 'Culture and City Explorer' ? ' border-black' : ''} border flex flex-col items-center flex-shrink-0 rounded-2xl shadow-xl`}>
-                        <Image className='' src='/cultural.png' width={180} height={150} alt={'star'} />
-                        <p className='regular-14 -mt-10'>Culture and City Explorer</p>
-                    </div>
-                    <div onClick={() => handleChooseIdentity('Adventure Seeker')} className={`${travelDetails.identity === 'Adventure Seeker' ? ' border-black' : ''} border flex flex-col items-center flex-shrink-0 rounded-2xl shadow-xl`}>
-                        <Image className='' src='/Adventure.png' width={180} height={200} alt={'star'} />
-                        <p className='regular-14 -mt-10'>Adventure Seeker</p>
-                    </div>
-                    <div onClick={() => handleChooseIdentity('Luxury Enthusiast')} className={`${travelDetails.identity === 'Luxury Enthusiast' ? ' border-black' : ''} border flex flex-col items-center flex-shrink-0 rounded-2xl shadow-xl`}>
-                        <Image className='' src='/Luxe.png' width={180} height={200} alt={'star'} />
-                        <p className='regular-14 -mt-10'>Luxury Enthusiast</p>
-                    </div>
-                    <div onClick={() => handleChooseIdentity('Nature Lover')} className={`${travelDetails.identity === 'Nature Lover' ? ' border-black' : ''} border flex flex-col items-center flex-shrink-0 rounded-2xl shadow-xl`}>
-                        <Image className='' src='/relax.png' width={180} height={200} alt={'star'} />
-                        <p className='regular-14 -mt-10'>Nature Lover</p>
-                    </div>
-                    <div onClick={() => handleChooseIdentity('Budget Traveler')} className={`${travelDetails.identity === 'Budget Traveler' ? ' border-black' : ''} border flex flex-col items-center flex-shrink-0 rounded-2xl shadow-xl`}>
-                        <Image className='' src='/Budget.png' width={180} height={200} alt={'star'} />
-                        <p className='regular-14 -mt-10 mb-3'>Budget Traveler</p>
-                    </div>
+            {loading ?  <div className='flex w-full h-full items-center justify-center'><Image 
+                        src="/loadingTravel.svg"
+                        alt='loading icon'
+                        width={50}
+                        height={50}
+                        className=''
+                        /></div> 
+            :
+            <div>
+                <div className='my-3'>
+                        <>
+                        <h3 className='mb-2'>Choose your personality</h3>
+                        <div className='flex flex-row overflow-y-hidden overflow-x-auto gap-1 '>
+                            <div onClick={() => handleChooseIdentity('Culture and City Explorer')} className={`${travelDetails.identity === 'Culture and City Explorer' ? ' border-black' : ''} border flex flex-col items-center flex-shrink-0 rounded-2xl shadow-xl`}>
+                                <Image className='' src='/cultural.png' width={180} height={150} alt={'star'} />
+                                <p className='regular-14 -mt-10'>Culture and City Explorer</p>
+                            </div>
+                            <div onClick={() => handleChooseIdentity('Adventure Seeker')} className={`${travelDetails.identity === 'Adventure Seeker' ? ' border-black' : ''} border flex flex-col items-center flex-shrink-0 rounded-2xl shadow-xl`}>
+                                <Image className='' src='/Adventure.png' width={180} height={200} alt={'star'} />
+                                <p className='regular-14 -mt-10'>Adventure Seeker</p>
+                            </div>
+                            <div onClick={() => handleChooseIdentity('Luxury Enthusiast')} className={`${travelDetails.identity === 'Luxury Enthusiast' ? ' border-black' : ''} border flex flex-col items-center flex-shrink-0 rounded-2xl shadow-xl`}>
+                                <Image className='' src='/Luxe.png' width={180} height={200} alt={'star'} />
+                                <p className='regular-14 -mt-10'>Luxury Enthusiast</p>
+                            </div>
+                            <div onClick={() => handleChooseIdentity('Nature Lover')} className={`${travelDetails.identity === 'Nature Lover' ? ' border-black' : ''} border flex flex-col items-center flex-shrink-0 rounded-2xl shadow-xl`}>
+                                <Image className='' src='/relax.png' width={180} height={200} alt={'star'} />
+                                <p className='regular-14 -mt-10'>Nature Lover</p>
+                            </div>
+                            <div onClick={() => handleChooseIdentity('Budget Traveler')} className={`${travelDetails.identity === 'Budget Traveler' ? ' border-black' : ''} border flex flex-col items-center flex-shrink-0 rounded-2xl shadow-xl`}>
+                                <Image className='' src='/Budget.png' width={180} height={200} alt={'star'} />
+                                <p className='regular-14 -mt-10 mb-3'>Budget Traveler</p>
+                            </div>
+                        </div>
+                        </>
                 </div>
-                </>
-                }
-            </div>
-            <div className='max-w-lg'>
-                <form onSubmit={handleSubmit}>
-                <div className='mt-5'>
-                    <h3 className='regular-16 mb-2'>Your Vacation's Duration</h3>
-                    <div>
-                        <input className="border w-full px-2 py-1" value={travelDetails.duration} onChange={handleChangeForm} name="duration" type='text' placeholder='2 Weeks'/>
+
+                <div className='max-w-lg'>
+                    <form onSubmit={handleSubmit}>
+                    <div className='mt-5'>
+                        <h3 className='regular-16 mb-2'>Your Vacation's Duration</h3>
+                        <div>
+                            <input className="border w-full px-2 py-1" value={travelDetails.duration} onChange={handleChangeForm} name="duration" type='text' placeholder='2 Weeks'/>
+                        </div>
                     </div>
-                </div>
-                <div className='mt-5'>
-                    <h3 className='regular-16 mb-2'>Amount of persons</h3>
-                    <div>
-                        <input className="border w-full px-2 py-1"  value={travelDetails.persons} onChange={handleChangeForm}  name="persons" type='text' placeholder='2 persons'/>
+                    <div className='mt-5'>
+                        <h3 className='regular-16 mb-2'>Amount of persons</h3>
+                        <div>
+                            <input className="border w-full px-2 py-1"  value={travelDetails.persons} onChange={handleChangeForm}  name="persons" type='text' placeholder='2 persons'/>
+                        </div>
                     </div>
-                </div>
-                <div className='mt-5'>
-                    <h3 className='regular-16 mb-2'>Your Maximum Budget</h3>
-                    <div>
-                        <input className="border w-full px-2 py-1" value={travelDetails.budget} onChange={handleChangeForm} name="budget" type='text' placeholder='500 euro'/>
+                    <div className='mt-5'>
+                        <h3 className='regular-16 mb-2'>Your Maximum Budget</h3>
+                        <div>
+                            <input className="border w-full px-2 py-1" value={travelDetails.budget} onChange={handleChangeForm} name="budget" type='text' placeholder='500 euro'/>
+                        </div>
                     </div>
-                </div>
-                <div className='mt-5'>
-                    <h3 className='regular-16 mb-2'>Your Current Location</h3>
-                    <div>
-                        <input className="border w-full px-2 py-1"  value={travelDetails.currentLocation} onChange={handleChangeForm}  name="currentLocation" type='text' placeholder='Netherlands'/>
+                    <div className='mt-5'>
+                        <h3 className='regular-16 mb-2'>Your Current Location</h3>
+                        <div>
+                            <input className="border w-full px-2 py-1"  value={travelDetails.currentLocation} onChange={handleChangeForm}  name="currentLocation" type='text' placeholder='Netherlands'/>
+                        </div>
                     </div>
-                </div>
-                <div className='flex flex-col w-full gap-3 mt-5 xl:flex-row'>
-                <Button theme='btn_green' title="Create Travel Plan" type="button" />
-                <Button theme="btn_white_text" title="Finish Travel Identity test first" icon="/play.svg" />
-             </div>
-             </form>
-            </div> 
-           
-        </div> : 
+                    <div className='flex flex-col w-full gap-3 mt-5 xl:flex-row'>
+                        <Button theme='btn_green' title="Create Travel Plan" type="button" />
+                        <Button theme="btn_white_text" title="Finish Travel Identity test first" icon="/play.svg" />
+                    </div>
+                    </form>
+                </div> 
+           </div>}
+        </div> 
+        : 
         <div className='flex flex-col gap-10 md:w-1/2'>
             <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-2xl p-5'>
                 <Image 
