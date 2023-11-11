@@ -57,9 +57,9 @@ export default function travelPlan() {
                 },
                 body: JSON.stringify(travelDetails)
             })
-            // if (!response.ok){
-            //     throw new Error('No connection with severless function')
-            // }
+            if (!response.ok){
+                throw new Error('Provide proper input please')
+            }
             const data = await response.json()
 
             console.log('10 nov - JSON string to Javascript object')
@@ -139,25 +139,25 @@ return (
                     <div className='mt-5'>
                         <h3 className='regular-16 mb-2'>Your Vacation's Duration</h3>
                         <div>
-                            <input className="border w-full px-2 py-1" value={travelDetails.duration} onChange={handleChangeForm} name="duration" type='text' placeholder='2 Weeks'/>
+                            <input className="border w-full px-2 py-1" required value={travelDetails.duration} onChange={handleChangeForm} name="duration" type='text' placeholder='2 Weeks'/>
                         </div>
                     </div>
                     <div className='mt-5'>
                         <h3 className='regular-16 mb-2'>Amount of persons</h3>
                         <div>
-                            <input className="border w-full px-2 py-1"  value={travelDetails.persons} onChange={handleChangeForm}  name="persons" type='text' placeholder='2 persons'/>
+                            <input className="border w-full px-2 py-1"  required value={travelDetails.persons} onChange={handleChangeForm}  name="persons" type='text' placeholder='2 persons'/>
                         </div>
                     </div>
                     <div className='mt-5'>
-                        <h3 className='regular-16 mb-2'>Your Maximum Budget</h3>
+                        <h3 className='regular-16 mb-2'>Your Maximum Budget in Euros</h3>
                         <div>
-                            <input className="border w-full px-2 py-1" value={travelDetails.budget} onChange={handleChangeForm} name="budget" type='text' placeholder='500 euro'/>
+                            <input className="border w-full px-2 py-1" required value={travelDetails.budget} onChange={handleChangeForm} name="budget" type='text' placeholder='500 euro'/>
                         </div>
                     </div>
                     <div className='mt-5'>
-                        <h3 className='regular-16 mb-2'>Your Current Location</h3>
+                        <h3 className='regular-16 mb-2'>Your Current Country</h3>
                         <div>
-                            <input className="border w-full px-2 py-1"  value={travelDetails.currentLocation} onChange={handleChangeForm}  name="currentLocation" type='text' placeholder='Netherlands'/>
+                            <input className="border w-full px-2 py-1" required value={travelDetails.currentLocation} onChange={handleChangeForm}  name="currentLocation" type='text' placeholder='Netherlands'/>
                         </div>
                     </div>
                     <div className='flex flex-col w-full gap-3 mt-5 xl:flex-row'>
@@ -190,7 +190,7 @@ return (
              </div>
                 <div className='flex flex-col w-full gap-3 mt-10 sm:flex-row'>
                     <Button theme='btn_green' title="Share your plan" type="button" />
-                    <Link href="/travelItenary"> <Button theme="btn_white_text" title="Write an review" icon="/play.svg" /></Link>
+                    <Link href="/"> <Button theme="btn_white_text" title="Write an review" icon="/play.svg" /></Link>
                 </div>
             </div>
             <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-2xl p-5'>
