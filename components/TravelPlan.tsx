@@ -58,7 +58,7 @@ export default function travelPlan() {
                 body: JSON.stringify(travelDetails)
             })
             if (!response.ok){
-                throw new Error('Provide proper input please')
+                throw  new Error('Provide proper input please')
             }
             const data = await response.json()
 
@@ -70,8 +70,9 @@ export default function travelPlan() {
             console.log(typeof travelData)
             setGeneratedPlan(travelData)
         }
-        catch (error) {
-            console.log(error)
+        catch (error: any) {
+            setError(error.message)
+            console.log(error.message)
         }
         finally {
             setLoading(false)
@@ -237,7 +238,7 @@ return (
                 <Image className='absolute top-5 right-5' src='/white-close.png' width={20} height={5} alt={'star'} />
     
             </div>
-            <Image className='hidden md:flex' src='/gotravel.svg' width={3500} height={2500} alt={'star'} />
+            {generatedPlan.title ? <Image className='hidden md:flex' src='/gotravel.svg' width={3500} height={2500} alt={'star'} /> : <Image className='hidden md:flex' src='/travelHeroIcon1.png' width={3500} height={2500} alt={'star'} />}
             
         </div>
         </div>
