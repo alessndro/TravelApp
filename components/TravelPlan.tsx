@@ -209,9 +209,10 @@ return (
                     <p className='my-2 lg:my-4'><span className='bold-16'>Short summary:</span><br></br> {generatedPlan.short_summary}</p>
                 </div>
             </div>
-        </div> }
-
+        </div>
         }
+
+        
         <div className='relative z-20  flex flex-1 flex-col  justify-center items-start md:w-1/2'>
 
             <div className='hidden absolute top-0 md:flex bg-green-90 rounded-3xl px-5 py-5'>
