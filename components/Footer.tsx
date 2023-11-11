@@ -11,15 +11,12 @@ export default function Footer() {
                         <h3 className='bold-18'>Traveler's Insight</h3>
                     </Link>
                         <div className=' flex gap-2'>
-                            <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/">
-                                Test1
-                            </Link>
-                            <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/">
-                                Test2
-                            </Link>
-                            <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/">
-                                Test3
-                            </Link>
+                        <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/personality">
+                            Travel Personality
+                        </Link>
+                        <Link className='regular-16 text-gray-50 transition-all hover:font-bold' href="/travelItenary">
+                            Travel Plan
+                        </Link>
                         </div>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
