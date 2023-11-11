@@ -24,6 +24,7 @@ export default function travelPlan() {
     });
 
     const [error, setError] = React.useState('')
+    const [loading, setLoading] = React.useState(false)
 
     function handleChooseIdentity(name: string){
         console.log('handle choose')
@@ -82,7 +83,7 @@ return (
     
         
         {/* LEFT SIDE OF HERO */}
-       <div className=' max-container padding-container py-10 2xl:py-20 gap-20 flex flex-col  md:flex-row '>
+      { !loading ? <div className=' max-container padding-container py-10 2xl:py-20 gap-20 flex flex-col  md:flex-row '>
         
         {!generatedPlan.title ? <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-3xl p-5 md:w-1/2'>
             <Image 
@@ -222,7 +223,7 @@ return (
             
         </div>
         </div>
-       
+       : <h1>loading</h1>}
     </section>
   );
 }
