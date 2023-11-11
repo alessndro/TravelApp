@@ -101,8 +101,8 @@ return (
             {loading ?  <div className='flex w-full h-full items-center justify-center'><Image 
                         src="/loadingTravel.svg"
                         alt='loading icon'
-                        width={50}
-                        height={50}
+                        width={300}
+                        height={300}
                         className=''
                         /></div> 
             :
