@@ -84,16 +84,16 @@ export default function Questions() {
         <div className='container max-container padding-container flex flex-col py-10 2xl:py-20 lg:flex-row'>
         {!showIdentity && 
         
-        <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-3xl p-5 md:w-1/2'>
+        <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-xl p-10 md:w-1/2'>
             <Image 
                 src="/plane.svg"
                 alt='plane icon'
                 width={50}
                 height={50}
-                className='absolute left-[5px] top-[-15px] w-10 lg:w-[50px]'
+                className='absolute left-[35px] top-[0px] w-10 lg:w-[50px]'
             />
             <h2 className='bold-32 lg:bold-52'>Discover your Travel Identity</h2>
-            <p className='regular-16 text-gray-30 mt-5 mb-10'>Are you a true wanderer at heart, always seeking new adventures and exploring new horizons? Or do you prefer the comforts of home and the familiarity of your surroundings? Find out where you stand on the travel spectrum with our Travel Identity Survey. Travel identity is a unique and personal way to understand how you connect with the world through your travel experiences. It's about recognizing your travel preferences, exploring your comfort zones, and discovering the destinations and experiences that truly resonate with you.</p>
+            <p className='regular-16 text-gray-30 mt-5 mb-10 '>Are you a true wanderer at heart, always seeking new adventures and exploring new horizons? Or do you prefer the comforts of home and the familiarity of your surroundings? Find out where you stand on the travel spectrum with our Travel Identity Survey. Travel identity is a unique and personal way to understand how you connect with the world through your travel experiences. It's about recognizing your travel preferences, exploring your comfort zones, and discovering the destinations and experiences that truly resonate with you.</p>
 
             {!isSurveyDisplayed ? 
         
@@ -101,7 +101,7 @@ export default function Questions() {
             
             :
             
-            <form  onSubmit={handleSubmit} className='slide-in-fwd-center mt-5 overflow-y-auto max-h-96'>
+            <form  onSubmit={handleSubmit} className='slide-in-fwd-center overflow-y-auto max-h-96 mb-5'>
 
                 <fieldset>
                     <legend className='mb-2'>What type of vacation experience do you prefer the most?</legend>
@@ -433,7 +433,7 @@ export default function Questions() {
         }
 
         {showIdentity &&
-            <div className='lg:w-1/2'>
+            <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-xl p-5 md:w-1/2'>
                  <h2 className='bold-32 lg:bold-40'>Great News!</h2>
                  <h3 className='regular-42 lg:regular-32 mt-2 lg:mt-4 text-green-950'>{travelIdentity ? travelIdentity : 'A real Traveler'}</h3>
                 <p className='regular-16 text-gray-30 mt-5 lg:w-max-md'>Our AI machines have delved deep into your travel preferences, and the verdict is in. Get ready to uncover your extraordinary travel personality! {travelPersonality && travelPersonality}.

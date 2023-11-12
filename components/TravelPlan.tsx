@@ -88,13 +88,13 @@ return (
         {/* LEFT SIDE OF HERO */}
        <div className=' max-container padding-container py-10 2xl:py-20 gap-20 flex flex-col  md:flex-row '>
     
-        {!generatedPlan.title ? <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-3xl p-5 md:w-1/2'>
+        {!generatedPlan.title ? <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-xl p-10 md:w-1/2'>
             <Image 
                 src="/plane.svg"
                 alt='plane icon'
                 width={50}
                 height={50}
-                className='absolute left-[15px] top-[-15px] w-10 lg:w-[50px]'
+                className='absolute left-[35px] top-[0px] w-10 lg:w-[50px]'
             />
              <h2 className='bold-32 lg:bold-52'>Let's Craft Your Journey! </h2>
              <p className='regular-16 text-gray-30 mt-2'> Share your travel details, and we'll shape a one-of-a-kind journey tailored to your interests. Get started now and embark on a unique exploration. </p>
@@ -107,7 +107,7 @@ return (
                         /></div> 
             :
             <div>
-                <div className='my-3'>
+                <div className='my-5'>
                         <>
                         <h3 className='mb-2'>Choose your personality</h3>
                         <div className='flex flex-row overflow-y-hidden overflow-x-auto gap-1 '>
@@ -161,7 +161,7 @@ return (
                             <input className="border w-full px-2 py-1" required value={travelDetails.currentLocation} onChange={handleChangeForm}  name="currentLocation" type='text' placeholder='Netherlands'/>
                         </div>
                     </div>
-                    <div className='flex flex-col w-full gap-3 mt-5 xl:flex-row'>
+                    <div className='flex flex-col w-full gap-3 my-5 mt-10 xl:flex-row'>
                         <Button theme='btn_green' title="Create Travel Plan" type="button" />
                         <Button theme="btn_white_text" title="Finish Travel Identity test first" icon="/play.svg" />
                     </div>
@@ -171,7 +171,7 @@ return (
         </div> 
         : 
         <div className='flex flex-col gap-10 md:w-1/2'>
-            <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-2xl p-5'>
+            <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-xl p-10'>
                 <Image 
                     src="/plane.svg"
                     alt='plane icon'
@@ -194,7 +194,7 @@ return (
                     <Link href="/"> <Button theme="btn_white_text" title="Write an review" icon="/play.svg" /></Link>
                 </div>
             </div>
-            <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-2xl p-5'>
+            <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-xl p-10'>
                 <div>
                     <h3 className='bold-20 lg:bold-32 my-2 lg:my-4'>{generatedPlan.title}</h3>
                     <div className='flex flex-row my-2 lg:my-4'>
@@ -219,7 +219,7 @@ return (
         
         <div className='relative z-20  flex flex-1 flex-col  justify-center items-start md:w-1/2'>
 
-            <div className='hidden absolute top-0 md:flex bg-green-90 rounded-3xl px-5 py-5'>
+            <div className='hidden absolute top-0 md:flex bg-green-90 rounded-xl px-5 py-5'>
                 {!generatedPlan.title ?
                 <div className='flex flex-row justify-between'>
                     <div className='flex flex-col mr-10'>
