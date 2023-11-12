@@ -458,13 +458,16 @@ export default function Questions() {
             <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-xl p-5 md:w-1/2'>
                  <h2 className='bold-32 lg:bold-40'>Great News!</h2>
                  <h3 className='regular-42 lg:regular-32 mt-2 lg:mt-4 text-green-950'>{travelIdentity ? travelIdentity : 'A real Traveler'}</h3>
-                 <Image 
+                 <div className='slide-in-fwd-center w-full border flex flex-col items-center flex-shrink-0 rounded-2xl shadow-xl'>
+                                <Image className='' src='/cultural.png' width={280} height={250} alt={'personality'} />
+                            </div>
+                 {/* <Image 
                     src={travelImage}
                     alt='image personality'
                     width={700}
                     height={400}
                     className='slide-in-fwd-center w-full'
-                />
+                /> */}
                 <p className='regular-16 text-gray-30 mt-5 lg:w-max-md'>Our AI machines have delved deep into your travel preferences, and the verdict is in. Get ready to uncover your extraordinary travel personality! {travelPersonality && travelPersonality}.
 
                 Here are a few tailored recommendations for your next adventure: </p>
