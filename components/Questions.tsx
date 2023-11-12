@@ -78,13 +78,7 @@ export default function Questions() {
     }, [travelIdentity])
     
     return (
-        
-    //     <section className='hero-travelplan'>
-    
-        
-    //     {/* LEFT SIDE OF HERO */}
-    //    <div className=' max-container padding-container py-10 2xl:py-20 gap-20 flex flex-col  md:flex-row '>
-        
+             
     <section className='hero-travelplan'>
         
         <div className='container max-container padding-container flex flex-col py-10 2xl:py-20 lg:flex-row'>

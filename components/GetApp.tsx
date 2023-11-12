@@ -13,12 +13,6 @@ export default function GetApp() {
                 <p className='mt-5 max-w-lg'>Are you ready for a journey that's uniquely yours? Unleash the power of AI with Traveler's Insight and embark on your dream adventure. 🌍✈️</p>
                 <div className='flex flex-col gap-3 mt-5 lg:flex-row'>
                   <Link href="/personality"><Button type="button" title="Start your Personality test" theme="btn_white"/></Link>
-                    {/* <Button 
-                        type="button"
-                        title="Play Store"
-                        icon="/android.svg"
-                        theme="btn_dark_green_outline"
-                        /> */}
                 </div>
             </div>
             <div className='flex justify-center items-center'>
@@ -28,6 +22,3 @@ export default function GetApp() {
     </section>
   )
 }
-
-
-// max-container relative flex w-full  flex-col justify-between gap-32 overflow-hidden bg-green-90 bg-pattern bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
