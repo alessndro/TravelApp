@@ -79,12 +79,33 @@ export default function Questions() {
     
     return (
         
-    <section className='container max-container padding-container flex flex-col py-10 2xl:py-20 lg:flex-row'>
-        {!showIdentity && <div className='lg:w-1/2 border'>
-            <h2 className='bold-32 lg:bold-40'>Discover your Travel Identity</h2>
+    //     <section className='hero-travelplan'>
+    
+        
+    //     {/* LEFT SIDE OF HERO */}
+    //    <div className=' max-container padding-container py-10 2xl:py-20 gap-20 flex flex-col  md:flex-row '>
+        
+    <section className='hero-travelplan'>
+        
+        <div className='container max-container padding-container flex flex-col py-10 2xl:py-20 lg:flex-row'>
+        {!showIdentity && 
+        
+        <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-3xl p-5 md:w-1/2'>
+            <Image 
+                src="/plane.svg"
+                alt='plane icon'
+                width={50}
+                height={50}
+                className='absolute left-[5px] top-[-15px] w-10 lg:w-[50px]'
+            />
+            <h2 className='bold-32 lg:bold-52'>Discover your Travel Identity</h2>
             <p className='regular-16 text-gray-30 mt-5 mb-10'>Are you a true wanderer at heart, always seeking new adventures and exploring new horizons? Or do you prefer the comforts of home and the familiarity of your surroundings? Find out where you stand on the travel spectrum with our Travel Identity Survey. Travel identity is a unique and personal way to understand how you connect with the world through your travel experiences. It's about recognizing your travel preferences, exploring your comfort zones, and discovering the destinations and experiences that truly resonate with you.</p>
-           
-            {!isSurveyDisplayed ? <div onClick={toggleSurvey}><Button type="button" title='Start the survey' theme='btn_green' icon="/user.svg"/></div> :
+
+            {!isSurveyDisplayed ? 
+        
+            <div onClick={toggleSurvey}><Button type="button" title='Start the survey' theme='btn_green' icon="/user.svg"/></div> 
+            
+            :
             
             <form  onSubmit={handleSubmit} className='slide-in-fwd-center mt-5 overflow-y-auto max-h-96'>
 
@@ -412,84 +433,37 @@ export default function Questions() {
 
 
                 <Button type="button" title='Show my identity' theme='btn_dark_green' icon="/user.svg"/>
-            </form>}
-        </div>}
+            </form>
+            }
+        </div>
+        }
+
         {showIdentity &&
-            <div className='lg:w-1/2 border'>
+            <div className='lg:w-1/2'>
                  <h2 className='bold-32 lg:bold-40'>Great News!</h2>
                  <h3 className='regular-42 lg:regular-32 mt-2 lg:mt-4 text-green-950'>{travelIdentity ? travelIdentity : 'A real Traveler'}</h3>
-            <p className='regular-16 text-gray-30 mt-5 lg:w-max-md'>Our AI machines have delved deep into your travel preferences, and the verdict is in. Get ready to uncover your extraordinary travel personality! {travelPersonality && travelPersonality}.
+                <p className='regular-16 text-gray-30 mt-5 lg:w-max-md'>Our AI machines have delved deep into your travel preferences, and the verdict is in. Get ready to uncover your extraordinary travel personality! {travelPersonality && travelPersonality}.
 
-Here are a few tailored recommendations for your next adventure: </p>
-<div className='flex flex-col w-full gap-3 mt-10 sm:flex-row'>
+                Here are a few tailored recommendations for your next adventure: </p>
+            <div className='flex flex-col w-full gap-3 mt-10 sm:flex-row'>
                 <Button theme='btn_green' title="Generate plan" type="button" />
                 <Button theme="btn_white_text" title="Share with friends" icon="/play.svg" />
              </div>
             </div>
         }
-        <div className='lg:w-1/2 border bg-feature-bg bg-center bg-no-repeat'>
-            <Image 
-                src={!travelImage ? "/Cultural.png": travelImage}
-                alt='image personality'
-                width={700}
-                height={400}
-                className='slide-in-fwd-center border w-full'
-            />
-        </div>
-    </section>
-    // <section className='border-2 border-red-500 container max-container padding-container flex flex-col gap-20 py-10 2xl:py-20 lg:flex-row'>
-    //     <div className='hero-map' />
         
-    //     {/* LEFT SIDE OF HERO */}
-    //     <div className='border-2 border-green-500 relative z-20  flex flex-1 flex-col lg:w-1/2'>
-    //         <Image 
-    //             src="/camp.svg"
-    //             alt='camp icon'
-    //             width={50}
-    //             height={50}
-    //             className='absolute left-[-5px] top-[-30px] w-10 lg:w-[50px]'
-    //         />
-    //          <h1 className='bold-52 lg:bold-88'>AI generated Personal Travel Plan</h1>
-    //          <p className='regular-16 text-gray-30 mt-5'>Lorem ipsum dolor do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    
+            <div className='lg:w-1/2 hidden md:flex'>
+                <Image 
+                    src={!travelImage ? "/identity.png": travelImage}
+                    alt='image personality'
+                    width={700}
+                    height={400}
+                    className='slide-in-fwd-center w-full'
+                />
+            </div>
+        </div>
 
-    //          <div className='flex items-center justify-start mt-5'>
-    //             <Image src='/star.svg' width={20} height={20} alt={'star'} />
-    //             <Image src='/star.svg' width={20} height={20} alt={'star'} />
-    //             <Image src='/star.svg' width={20} height={20} alt={'star'} />
-    //             <Image src='/star.svg' width={20} height={20} alt={'star'} />
-    //             <Image src='/star.svg' width={20} height={20} alt={'star'} />
-    //             <p className='ml-5 medium-14'>198k<span className='ml-1 text-gray-30'>Verified Reviews</span></p>
-    //          </div>
-
-    //          <div className='border border-green-100 flex flex-col w-full gap-3 mt-10 sm:flex-row'>
-    //             <Button theme='btn_green' title="Start Now" type="button" />
-    //             <Button theme="btn_white_text" title="How Does it Work?" icon="/play.svg" />
-    //          </div>
-    //     </div>
-    //     <div className='border-2 border-green-500 relative z-20  flex flex-1 flex-col  justify-start items-start lg:w-1/2'>
-    //         <div className='bg-green-90 relative rounded-3xl px-5 py-5'>
-                
-    //             <div className='flex flex-row justify-between'>
-    //                 <div className='flex flex-col mr-10'>
-    //                     <p className='text-gray-20 medium-14'>Location</p>
-    //                     <p className='text-white bold-16 '>Praia da Adraga</p>
-    //                 </div>
-    //             </div>
-
-    //             <div className='flex flex-row mt-5'>
-    //                 <div className='flex flex-col'>
-    //                     <p className='text-gray-20 text-sm'>Distance</p>
-    //                     <p className='text-white bold-16 '>215 km</p>
-    //                 </div>
-    //                 <div className='flex flex-col ml-10'>
-    //                     <p className='text-gray-20 text-sm'>Elvation</p>
-    //                     <p className='text-white bold-16 '>35 m</p>
-    //                 </div>
-    //             </div>
-    //             <Image className='absolute top-5 right-5' src='/white-close.png' width={20} height={5} alt={'star'} />
-    //         </div>
-    //     </div>
-       
-    // </section>
+    </section>
   )
 }
