@@ -79,7 +79,7 @@ export default function Questions() {
     
     return (
              
-    <section className='hero-travelplan'>
+    <section className='question-hero'>
         
         <div className='container max-container padding-container flex flex-col py-10 2xl:py-20 lg:flex-row'>
         {!showIdentity && 
@@ -447,7 +447,7 @@ export default function Questions() {
         }
         
     
-            <div className='lg:w-1/2 hidden md:flex'>
+            <div className='lg:w-1/2 hidden md:flex items-center justify-center'>
                 <Image 
                     src={!travelImage ? "/identity.png": travelImage}
                     alt='image personality'
