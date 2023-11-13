@@ -457,7 +457,7 @@ export default function Questions() {
 
         {showIdentity &&
             <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-xl p-10 md:w-1/2'>
-                 <div className='flex flex-col md:flex-row relative'>
+                 <div className='flex flex-col md:flex-row '>
                     <div className='flex flex-col justify-center'>
                         <h2 className='bold-32 lg:bold-40'>Great News!</h2>
                         <h3 className='regular-42 lg:regular-32 mt-2 lg:mt-4 text-green-950'>{travelIdentity ? travelIdentity : 'A real Traveler'}</h3>
