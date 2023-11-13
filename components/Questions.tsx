@@ -460,15 +460,18 @@ export default function Questions() {
                  <div className='flex flex-col md:flex-row '>
                     <div className='flex flex-col justify-center'>
                         <h2 className='bold-32 lg:bold-40'>Great News!</h2>
+                        <div className='slide-in-fwd-center'>
+                                <Image className='' src={travelImage} width={280} height={250} alt={'personality'} />
+                            </div>
                         <h3 className='regular-42 lg:regular-32 mt-2 lg:mt-4 text-green-950'>{travelIdentity ? travelIdentity : 'A real Traveler'}</h3>
                         <p className='regular-16 text-gray-30 mt-5 lg:w-max-md'>Our AI machines have delved deep into your travel preferences, and the verdict is in. Get ready to uncover your extraordinary travel personality! {travelPersonality && travelPersonality}.
 
 Here are a few tailored recommendations for your next adventure: </p>
                     </div>
                     
-                 <div className='slide-in-fwd-center absolute top-0 right-0'>
+                 {/* <div className='slide-in-fwd-center'>
                                 <Image className='' src={travelImage} width={280} height={250} alt={'personality'} />
-                            </div>
+                            </div> */}
                  {/* <Image 
                     src={travelImage}
                     alt='image personality'
