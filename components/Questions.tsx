@@ -457,7 +457,7 @@ export default function Questions() {
 
         {showIdentity &&
             <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-xl p-10 md:w-1/2'>
-                 <div className='flex flex-col md:flex-row md:items-center md:justify-center'>
+                 <div className='flex flex-col md:flex-row relative'>
                     <div className='flex flex-col justify-center md:w-1/2'>
                         <h2 className='bold-32 lg:bold-40'>Great News!</h2>
                         <h3 className='regular-42 lg:regular-32 mt-2 lg:mt-4 text-green-950'>{travelIdentity ? travelIdentity : 'A real Traveler'}</h3>
@@ -466,7 +466,7 @@ export default function Questions() {
 Here are a few tailored recommendations for your next adventure: </p>
                     </div>
                     
-                 <div className='slide-in-fwd-center flex flex-col justify-center items-center flex-shrink-0'>
+                 <div className='slide-in-fwd-center flex flex-col justify-center items-center flex-shrink-0 absolute top-0 right-0'>
                                 <Image className='' src={travelImage} width={280} height={250} alt={'personality'} />
                             </div>
                  {/* <Image 
@@ -487,7 +487,7 @@ Here are a few tailored recommendations for your next adventure: </p>
         }
         
     
-            <div className='lg:w-1/2 hidden md:flex items-center justify-center'>
+            <div className='lg:w-1/2 hidden lg:flex items-center justify-center'>
                 <Image 
                     src={"/identity.png"}
                     alt='image personality'
