@@ -20,7 +20,7 @@ export default function Questions() {
     const [travelImage, setTravelImage] = React.useState('')
     const [isSurveyDisplayed, setIsSurveyDisplayed] = React.useState(false)
     const [loading, setLoading] = React.useState(false)
-    const [erorr, setError] = React.useState()
+    const [error, setError] = React.useState()
 
     function toggleSurvey(){
         setIsSurveyDisplayed(prevStatus => !prevStatus)
@@ -449,7 +449,7 @@ export default function Questions() {
                     </fieldset>
 
 
-
+                    {error && <div><p>{error}</p></div>}
                     <Button type="button" title='Show my identity' theme='btn_dark_green' icon="/user.svg"/>
                 </form>
                 }

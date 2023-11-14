@@ -14,15 +14,15 @@ export default function travelPlan() {
     })
     // Initialise generatedPlan
     const [generatedPlan, setGeneratedPlan] = React.useState({
-        title: '2112312312312312312312123121233',
-        destination_city: '123',
-        destination_country: '123',
-        transport_method: '123',
-        transport_time: '123',
-        budget: '123',
-        activities: ['123','123'],
-        residence: "123",
-        short_summary: "123"
+        title: '',
+        destination_city: '',
+        destination_country: '',
+        transport_method: '',
+        transport_time: '',
+        budget: '',
+        activities: [],
+        residence: "",
+        short_summary: ""
     });
 
     // Initialise loading and error
