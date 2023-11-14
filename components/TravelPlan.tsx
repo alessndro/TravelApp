@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Button from './Button';
 import Link from 'next/link'
 export default function travelPlan() {
+    // Initialise travelDetails used as input to generate plan
     const [travelDetails, setTravelDetails] = React.useState({
         identity: '',
         duration: '',
@@ -11,6 +12,7 @@ export default function travelPlan() {
         budget: '',
         currentLocation:'',  
     })
+    // Initialise generatedPlan
     const [generatedPlan, setGeneratedPlan] = React.useState({
         title: '',
         destination_city: '',
@@ -23,20 +25,21 @@ export default function travelPlan() {
         short_summary: ""
     });
 
+    // Initialise loading and error
     const [error, setError] = React.useState('')
     const [loading, setLoading] = React.useState(false)
 
+    // Choose one of the travel identities
     function handleChooseIdentity(name: string){
-        console.log('handle choose')
         setTravelDetails(prevDetails => {
             return {
                 ...prevDetails,
                 identity: name
             }
         })
-        console.log(travelDetails.identity)
     }
 
+    // Handle change in Form
     function handleChangeForm(event: React.ChangeEvent<HTMLInputElement>){
         setTravelDetails(prevDetails => {
             return {
@@ -46,6 +49,7 @@ export default function travelPlan() {
         })
     }
 
+    // Handle submit of form
     async function handleSubmit(event: React.FormEvent<HTMLFormElement>){
         event.preventDefault();
         try {
@@ -60,23 +64,16 @@ export default function travelPlan() {
             if (!response.ok){
                 throw  new Error('Provide proper input please')
             }
+            // Make contact with API
             const data = await response.json()
-
-            console.log('10 nov - JSON string to Javascript object')
             let travelData = JSON.parse(data.value);
-            
-            console.log('traveldata')
-            console.log(travelData)
-            console.log(typeof travelData)
             setGeneratedPlan(travelData)
         }
         catch (error: any) {
             setError(error.message)
-            console.log(error.message)
         }
         finally {
             setLoading(false)
-            console.log(generatedPlan)
         }
     }
 
@@ -216,7 +213,7 @@ return (
         </div>
         }
 
-        
+          {/* RIGHT SIDE OF HERO */}
         <div className='relative z-20  flex flex-1 flex-col  justify-center items-start md:w-1/2'>
 
             <div className='hidden absolute top-0 md:flex bg-green-90 rounded-xl px-5 py-5'>

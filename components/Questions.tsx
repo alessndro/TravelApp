@@ -2,9 +2,10 @@
 import React, { use } from 'react'
 import Image from 'next/image'
 import Button from './Button'
-
+import Link from 'next/link'
 
 export default function Questions() {
+    // Input used to link personality
     const [userInformation, setUserInformation] = React.useState({
         type: '',
         location: '',
@@ -24,6 +25,7 @@ export default function Questions() {
     function toggleSurvey(){
         setIsSurveyDisplayed(prevStatus => !prevStatus)
     }
+    
     function handleChange(event: React.ChangeEvent<HTMLInputElement>){
         console.log('handle change')
         setUserInformation(prevUser => {
@@ -468,22 +470,11 @@ export default function Questions() {
 
 Here are a few tailored recommendations for your next adventure: </p>
                     </div>
-                    
-                 {/* <div className='slide-in-fwd-center'>
-                                <Image className='' src={travelImage} width={280} height={250} alt={'personality'} />
-                            </div> */}
-                 {/* <Image 
-                    src={travelImage}
-                    alt='image personality'
-                    width={700}
-                    height={400}
-                    className='slide-in-fwd-center w-full'
-                /> */}
                 </div>
                
             
             <div className='flex flex-col w-full gap-3 mt-10 sm:flex-row'>
-                <Button theme='btn_green' title="Generate plan" type="button" />
+                <Link href="/personality"><Button theme='btn_green' title="Generate plan" type="button" /></Link>
                 <Button theme="btn_white_text" title="Share with friends" icon="/play.svg" />
              </div>
             </div>
