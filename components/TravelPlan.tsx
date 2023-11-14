@@ -14,15 +14,15 @@ export default function travelPlan() {
     })
     // Initialise generatedPlan
     const [generatedPlan, setGeneratedPlan] = React.useState({
-        title: '',
-        destination_city: '',
-        destination_country: '',
-        transport_method: '',
-        transport_time: '',
-        budget: '',
-        activities: [],
-        residence: "",
-        short_summary: ""
+        title: '2112312312312312312312123121233',
+        destination_city: '123',
+        destination_country: '123',
+        transport_method: '123',
+        transport_time: '123',
+        budget: '123',
+        activities: ['123','123'],
+        residence: "123",
+        short_summary: "123"
     });
 
     // Initialise loading and error
@@ -192,11 +192,12 @@ return (
                 </div>
             </div>
             <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-xl p-10'>
-                <div>
-                    <h3 className='bold-20 lg:bold-32 my-2 lg:my-4'>{generatedPlan.title}</h3>
+                <div className='relative'>
+                    <h3 className='bold-20 lg:bold-32 my-2 mb-4 lg:my-4'>{generatedPlan.title}</h3>
+                    <p className='regular-16 absolute top-[-10px] right-0 text-green-700'>POWERED BY CHATGPT-4</p>
                     <div className='flex gap-3 flex-col w-full md:flex-row my-2 lg:my-4'>
-                        <p className='md:w-1/2'><span className='bold-16'>1. Location:</span>{generatedPlan.destination_city} in {generatedPlan.destination_country} </p>
-                        <p className='md:w-1/2'><span className='bold-16'>2. Budget:</span>  €{generatedPlan.budget}</p>
+                        <p className='md:w-1/2'><span className='bold-16'>1. Location:</span> {generatedPlan.destination_city} in {generatedPlan.destination_country} </p>
+                        <p className='md:w-1/2'><span className='bold-16'>2. Budget:</span>  {generatedPlan.budget}</p>
                     </div>
                     <div className='flex gap-3 flex-col w-full md:flex-row my-2 mb-3 lg:my-4'>
                         <p className='md:w-1/2'><span className='bold-16'>3. Transport:</span> {generatedPlan.transport_method}</p>
