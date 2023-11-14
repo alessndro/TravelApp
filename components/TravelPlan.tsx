@@ -194,13 +194,13 @@ return (
             </div>
             <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-xl p-10'>
                 <div className='relative'>
-                    <h3 className='bold-20 lg:bold-32 my-2 mb-4 lg:my-4'>{generatedPlan.title}</h3>
-                    <p className='regular-16 absolute top-[-10px] right-0 text-green-700'>POWERED BY CHATGPT-4</p>
-                    <div className='flex gap-3 flex-col w-full md:flex-row my-2 lg:my-4'>
+                    <h3 className='bold-20 lg:bold-32 mb-5'>{generatedPlan.title}</h3>
+                    <p className='regular-16 absolute top-[-15px] right-0 text-green-700'>POWERED BY CHATGPT-4</p>
+                    <div className='flex gap-5 flex-col w-full md:flex-row my-6'>
                         <p className='md:w-1/2'><span className='bold-16'>1. Location:</span> {generatedPlan.destination_city} in {generatedPlan.destination_country} </p>
                         <p className='md:w-1/2'><span className='bold-16'>2. Budget:</span>  {generatedPlan.budget}</p>
                     </div>
-                    <div className='flex gap-3 flex-col w-full md:flex-row my-2 mb-3 lg:my-4'>
+                    <div className='flex gap-5 flex-col w-full md:flex-row my-6'>
                         <p className='md:w-1/2'><span className='bold-16'>3. Transport:</span> {generatedPlan.transport_method}</p>
                         <p className='md:w-1/2'><span className='bold-16'>4. Duration:</span> {generatedPlan.transport_time}</p>
                     </div>
@@ -208,8 +208,8 @@ return (
                     <ol>{generatedPlan.activities.map((activity) => {
                         return <li><p className='mb-3'>- {activity}</p></li>
                     })}</ol>
-                    <p className='my-2 mb-3 lg:my-4'><span className='bold-16'>6. Residence:</span><br></br> {generatedPlan.residence}</p>
-                    <p className='my-2 lg:my-4'><span className='bold-16'>7. Short summary:</span><br></br> {generatedPlan.short_summary}</p>
+                    <p className='my-6'><span className='bold-16'>6. Residence:</span><br></br> {generatedPlan.residence}</p>
+                    <p className='my-6'><span className='bold-16'>7. Short summary:</span><br></br> {generatedPlan.short_summary}</p>
                 </div>
             </div>
         </div>
