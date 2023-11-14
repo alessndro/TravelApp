@@ -25,7 +25,7 @@ export default function Questions() {
     function toggleSurvey(){
         setIsSurveyDisplayed(prevStatus => !prevStatus)
     }
-    
+
     function handleChange(event: React.ChangeEvent<HTMLInputElement>){
         console.log('handle change')
         setUserInformation(prevUser => {
@@ -94,7 +94,7 @@ export default function Questions() {
              
     <section className='question-hero'>
         
-        <div className='container max-container padding-container flex flex-col py-10 2xl:py-20 lg:flex-row'>
+        <div className='container max-container padding-container flex flex-col py-10 2xl:py-20 md:flex-row'>
         {!showIdentity && 
         
         <div className='relative z-20 bg-white flex flex-1 flex-col shadow-2xl rounded-xl p-10 md:w-1/2'>
@@ -103,7 +103,7 @@ export default function Questions() {
                 alt='plane icon'
                 width={50}
                 height={50}
-                className='absolute left-[35px] top-[0px] w-10 lg:w-[50px]'
+                className='absolute left-[35px] top-[6px] w-10 lg:w-[50px]'
             />
             
             <h2 className='bold-32 lg:bold-52'>Discover your Travel Identity</h2>
@@ -128,10 +128,10 @@ export default function Questions() {
                 <form  onSubmit={handleSubmit} className='slide-in-fwd-center overflow-y-auto max-h-96 mb-5'>
 
                     <fieldset>
-                        <legend className='mb-2'>What type of vacation experience do you prefer the most?</legend>
+                        <legend className='mb-2 bold-16'>1. What type of vacation experience do you prefer the most?</legend>
                         
                         <div className='flex flex-col'>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="adventureActivity"
@@ -142,7 +142,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="adventureActivity">Adventure and adreline-packed activities</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="exploreActivity"
@@ -153,7 +153,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="exploreActivity">Exploring new cities, their culture, and history</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="luxeActivity"
@@ -164,7 +164,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="luxeActivity">Luxurious and comfortable getaways</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="relaxActivity"
@@ -175,7 +175,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="relaxActivity">Relaxing on a beach or in natural surroundings</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="budgetActivity"
@@ -191,10 +191,10 @@ export default function Questions() {
                     </fieldset>
                     
                     <fieldset>
-                        <legend className='mb-2'>Choose your ideal accommodation:</legend>
+                        <legend className='mb-2 bold-16'>2. Choose your ideal accommodation:</legend>
                         
                         <div className='flex flex-col'>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="natureAccomodation"
@@ -205,7 +205,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="natureAccomodation">Rustic lodges or camping sites close to nature</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="boutiqueHotel"
@@ -216,7 +216,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="boutiqueHotel">Boutique hotels in the heart of a bustling city</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="lavishHotel"
@@ -227,7 +227,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="lavishHotel">Lavish five-star resorts with all amenities</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="beachHotel"
@@ -238,7 +238,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="beachHotel">Beachfront resorts or cozy cabins in serene locations</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="budgetHotel"
@@ -255,10 +255,10 @@ export default function Questions() {
                     </fieldset>
 
                     <fieldset>
-                        <legend className='mb-2'>Your preferred travel activity</legend>
+                        <legend className='mb-2 bold-16'>3. Your preferred travel activity:</legend>
                         
                         <div className='flex flex-col'>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="thrilling"
@@ -269,7 +269,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="thrilling">Thrilling adventures like zip-lining and scuba diving</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="museum"
@@ -280,7 +280,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="museum">Museum visits, historical tours, and local food tasting</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="spa"
@@ -291,7 +291,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="spa">Spa treatments, fine dining, and upscale shopping</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="natureWalks"
@@ -302,7 +302,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="natureWalks">Beachcombing, nature walks, and spa treatments </label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="localMarkets"
@@ -319,10 +319,10 @@ export default function Questions() {
                     </fieldset>
 
                     <fieldset>
-                        <legend className='mb-2'>What's your preferred dining experience?</legend>
+                        <legend className='mb-2 bold-16'>4. What's your preferred dining experience:</legend>
                         
                         <div className='flex flex-col'>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="streetfood"
@@ -333,7 +333,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="unemployed">Trying street food and local delicacies</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="localrestaurants"
@@ -344,7 +344,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="localrestaurants">Dining at local restaurants and savoring regional cuisine</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="michelin"
@@ -355,7 +355,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="unemployed">Fine dining at Michelin-starred restaurants</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="casualbeachfront"
@@ -366,7 +366,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="casualbeachfront">Casual beachfront dining with fresh seafood</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="localBudget"
@@ -384,10 +384,10 @@ export default function Questions() {
 
 
                     <fieldset>
-                        <legend className='mb-2'>How do you like to spend your evenings while traveling</legend>
+                        <legend className='mb-2 bold-16'>5. How do you like to spend your evenings while traveling:</legend>
                         
                         <div className='flex flex-col'>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="campfire"
@@ -398,7 +398,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="campfire">Sharing adventure stories by the campfire</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="events"
@@ -409,7 +409,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="events">Attending local cultural events and festivals</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="cocktails"
@@ -420,7 +420,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="cocktails">Enjoying cocktails at upscale bars and lounges</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="sunset"
@@ -431,7 +431,7 @@ export default function Questions() {
                                 />
                                 <label className='ml-3' htmlFor="sunset">Watching the sunset on the beach or stargazing</label>
                             </div>
-                            <div>
+                            <div className='mb-2'>
                                 <input
                                     type="radio"
                                     id="entertainment"

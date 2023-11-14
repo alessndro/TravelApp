@@ -91,10 +91,10 @@ return (
                 alt='plane icon'
                 width={50}
                 height={50}
-                className='absolute left-[35px] top-[0px] w-10 lg:w-[50px]'
+                className='absolute left-[35px] top-[6px] w-10 lg:w-[50px]'
             />
              <h2 className='bold-32 lg:bold-52'>Let's Craft Your Journey! </h2>
-             <p className='regular-16 text-gray-30 mt-2'> Share your travel details, and we'll shape a one-of-a-kind journey tailored to your interests. Get started now and embark on a unique exploration. </p>
+             <p className='regular-16 text-gray-30 mt-2 mb-2'> Share your travel details, and we'll shape a one-of-a-kind journey tailored to your interests. Get started now and embark on a unique exploration. </p>
             {loading ?  <div className='flex w-full h-full items-center justify-center'><Image 
                         src="/loadingTravel.svg"
                         alt='loading icon'
@@ -106,7 +106,7 @@ return (
             <div>
                 <div className='my-5'>
                         <>
-                        <h3 className='mb-2'>Choose your personality</h3>
+                        <h3 className='mb-2 bold-16'>1. Choose your personality</h3>
                         <div className='flex flex-row overflow-y-hidden overflow-x-auto gap-1 '>
                             <div onClick={() => handleChooseIdentity('Culture and City Explorer')} className={`${travelDetails.identity === 'Culture and City Explorer' ? ' border-black' : ''} border flex flex-col items-center flex-shrink-0 rounded-2xl shadow-xl`}>
                                 <Image className='' src='/cultural.png' width={180} height={150} alt={'star'} />
@@ -135,32 +135,32 @@ return (
                 <div className='max-w-lg'>
                     <form onSubmit={handleSubmit}>
                     <div className='mt-5'>
-                        <h3 className='regular-16 mb-2'>Your Vacation's Duration</h3>
+                        <h3 className='bold-16 mb-2'>2. Your Vacation's Duration</h3>
                         <div>
                             <input className="border w-full px-2 py-1" required value={travelDetails.duration} onChange={handleChangeForm} name="duration" type='text' placeholder='2 Weeks'/>
                         </div>
                     </div>
                     <div className='mt-5'>
-                        <h3 className='regular-16 mb-2'>Amount of persons</h3>
+                        <h3 className='bold-16 mb-2'>3. Amount of people</h3>
                         <div>
-                            <input className="border w-full px-2 py-1"  required value={travelDetails.persons} onChange={handleChangeForm}  name="persons" type='text' placeholder='2 persons'/>
+                            <input className="border w-full px-2 py-1"  required value={travelDetails.persons} onChange={handleChangeForm}  name="persons" type='text' placeholder='2 people'/>
                         </div>
                     </div>
                     <div className='mt-5'>
-                        <h3 className='regular-16 mb-2'>Your Maximum Budget in Euros</h3>
+                        <h3 className='bold-16 mb-2'>4. Your Maximum Budget in Euros</h3>
                         <div>
-                            <input className="border w-full px-2 py-1" required value={travelDetails.budget} onChange={handleChangeForm} name="budget" type='text' placeholder='500 euro'/>
+                            <input className="border w-full px-2 py-1" required value={travelDetails.budget} onChange={handleChangeForm} name="budget" type='text' placeholder='500 euros'/>
                         </div>
                     </div>
                     <div className='mt-5'>
-                        <h3 className='regular-16 mb-2'>Your Current Country</h3>
+                        <h3 className='bold-16 mb-2'>5. Your Current Country</h3>
                         <div>
                             <input className="border w-full px-2 py-1" required value={travelDetails.currentLocation} onChange={handleChangeForm}  name="currentLocation" type='text' placeholder='Netherlands'/>
                         </div>
                     </div>
                     <div className='flex flex-col w-full gap-3 my-5 mt-10 xl:flex-row'>
                         <Button theme='btn_green' title="Create Travel Plan" type="button" />
-                        <Button theme="btn_white_text" title="Finish Travel Identity test first" icon="/play.svg" />
+                        <Link href="/personality"><Button theme="btn_white_text" title="Finish Travel Identity test first" icon="/play.svg" /></Link>
                     </div>
                     </form>
                 </div> 
