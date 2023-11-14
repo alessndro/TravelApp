@@ -10,7 +10,7 @@
 
 > Traveler's Insight is not just a travel planning website; it's your passport to personalized journeys. Begin your adventure by discovering your unique travel personality, tailored to your preferences and interests. Uncover destinations that align with your spirit and style. Then, seamlessly transition from self-discovery to practical planning. Fine-tune your dream trip by adding specific details like budget and duration. With Traveler's Insight, every journey becomes a reflection of who you are, ensuring each moment is as extraordinary as you are.
 
-### 🚀 [The Story](https://gotravelapp.netlify.app
+### 🚀 [The Story](https://gotravelapp.netlify.app)
 
 I created Traveler's Insight out of a personal frustration with the overwhelming task of choosing the perfect vacation destination. With countless options and a myriad of activities, it's easy to feel lost in the sea of choices. By starting with your unique travel personality, Traveler's Insight transforms the planning process. Now, your vacation isn't just a destination; it's an expression of your mood and personality. No more generic getaways—immerse yourself in experiences that resonate with who you are. Your dream vacation is just a personality quiz away with Traveler's Insight.
 
