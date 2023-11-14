@@ -449,7 +449,7 @@ export default function Questions() {
                     </fieldset>
 
 
-                    {error && <div><p>{error}</p></div>}
+                    {error && <p className='mt-5 text-green-700'>{error}</p>}
                     <Button type="button" title='Show my identity' theme='btn_dark_green' icon="/user.svg"/>
                 </form>
                 }
