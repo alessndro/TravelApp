@@ -195,19 +195,19 @@ return (
                 <div>
                     <h3 className='bold-20 lg:bold-32 my-2 lg:my-4'>{generatedPlan.title}</h3>
                     <div className='flex flex-col w-full md:flex-row my-2 md:w-1/2 lg:my-4'>
-                        <p className='w-1/2'><span className='bold-16'>1. Location:</span> {generatedPlan.destination_city} in {generatedPlan.destination_country}</p>
-                        <p className='w-1/2'><span className='bold-16'>2. Budget:</span> {generatedPlan.budget}</p>
+                        <p className='md:w-1/2'><span className='bold-16'>1. Location:</span> {generatedPlan.destination_city} in {generatedPlan.destination_country}</p>
+                        <p className='md:w-1/2'><span className='bold-16'>2. Budget:</span> {generatedPlan.budget}</p>
                     </div>
-                    <div className='flex flex-col w-full md:flex-row my-2 md:w-1/2 lg:my-4'>
-                        <p className='w-1/2'><span className='bold-16'>3. Transport:</span> {generatedPlan.transport_method}</p>
-                        <p className='w-1/2'><span className='bold-16'>4. Duration:</span> {generatedPlan.transport_time}</p>
+                    <div className='flex flex-col w-full md:flex-row my-2 lg:my-4'>
+                        <p className='md:w-1/2'><span className='bold-16'>3. Transport:</span> {generatedPlan.transport_method}</p>
+                        <p className='md:w-1/2'><span className='bold-16'>4. Duration:</span> {generatedPlan.transport_time}</p>
                     </div>
-                    <p className='bold-16'>Activities:</p>
+                    <p className='bold-16'>5. Activities:</p>
                     <ol>{generatedPlan.activities.map((activity) => {
                         return <li><p className='mb-3'>- {activity}</p></li>
                     })}</ol>
-                    <p className='my-2 lg:my-4'><span className='bold-16'>5. Residence:</span><br></br> {generatedPlan.residence}</p>
-                    <p className='my-2 lg:my-4'><span className='bold-16'>6. Short summary:</span><br></br> {generatedPlan.short_summary}</p>
+                    <p className='my-2 lg:my-4'><span className='bold-16'>6. Residence:</span><br></br> {generatedPlan.residence}</p>
+                    <p className='my-2 lg:my-4'><span className='bold-16'>7. Short summary:</span><br></br> {generatedPlan.short_summary}</p>
                 </div>
             </div>
         </div>
