@@ -91,7 +91,7 @@ return (
                 alt='plane icon'
                 width={50}
                 height={50}
-                className='absolute left-[35px] top-[6px] w-10 lg:w-[50px]'
+                className='absolute left-[35px] top-[8px] w-10 lg:w-[50px]'
             />
              <h2 className='bold-32 lg:bold-52'>Let's Craft Your Journey! </h2>
              <p className='regular-16 text-gray-30 mt-2 mb-2'> Share your travel details, and we'll shape a one-of-a-kind journey tailored to your interests. Get started now and embark on a unique exploration. </p>
@@ -174,7 +174,7 @@ return (
                     alt='plane icon'
                     width={50}
                     height={50}
-                    className='absolute left-[15px] top-[-15px] w-10 lg:w-[50px]'
+                    className='absolute left-[35px] top-[5px] w-10 lg:w-[50px]'
                 />
                 <h2 className='bold-32 lg:bold-52'>Your Personal Travel Plan</h2>
                 <p className='regular-16 text-gray-30 my-2'> Share your travel details, and we'll shape a one-of-a-kind journey tailored to your interests. Get started now and embark on a unique exploration. Don't forget to leave a review! </p>
@@ -195,8 +195,8 @@ return (
                 <div>
                     <h3 className='bold-20 lg:bold-32 my-2 lg:my-4'>{generatedPlan.title}</h3>
                     <div className='flex gap-3 flex-col w-full md:flex-row my-2 lg:my-4'>
-                        <p className='md:w-1/2'><span className='bold-16'>1. Location:</span> {generatedPlan.destination_city} in {generatedPlan.destination_country}</p>
-                        <p className='md:w-1/2'><span className='bold-16'>2. Budget:</span> {generatedPlan.budget}</p>
+                        <p className='md:w-1/2'><span className='bold-16'>1. Location:</span>{generatedPlan.destination_city} in {generatedPlan.destination_country} </p>
+                        <p className='md:w-1/2'><span className='bold-16'>2. Budget:</span>  €{generatedPlan.budget}</p>
                     </div>
                     <div className='flex gap-3 flex-col w-full md:flex-row my-2 mb-3 lg:my-4'>
                         <p className='md:w-1/2'><span className='bold-16'>3. Transport:</span> {generatedPlan.transport_method}</p>
