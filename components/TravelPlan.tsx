@@ -21,8 +21,8 @@ export default function travelPlan() {
         transport_time: '',
         budget: '',
         activities: [],
-        residence: "",
-        short_summary: ""
+        residence: '',
+        short_summary: ''
     });
 
     // Initialise loading and error
@@ -198,7 +198,7 @@ return (
                     <p className='regular-16 absolute top-[-15px] right-0 text-green-700'>POWERED BY CHATGPT-4</p>
                     <div className='flex gap-5 flex-col w-full md:flex-row my-6'>
                         <p className='md:w-1/2'><span className='bold-16'>1. Location:</span> {generatedPlan.destination_city} in {generatedPlan.destination_country} </p>
-                        <p className='md:w-1/2'><span className='bold-16'>2. Budget:</span>  {generatedPlan.budget}</p>
+                        <p className='md:w-1/2'><span className='bold-16'>2. Budget:</span> {generatedPlan.budget}</p>
                     </div>
                     <div className='flex gap-5 flex-col w-full md:flex-row my-6'>
                         <p className='md:w-1/2'><span className='bold-16'>3. Transport:</span> {generatedPlan.transport_method}</p>
